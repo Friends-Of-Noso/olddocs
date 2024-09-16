@@ -1,7 +1,7 @@
 [Main]
 StoreRelativePaths=1
 Language=en
-OutputDir=..\docs
+OutputDir=..\olddocs
 GenerateFormat=0
 ImplementationComments=3
 ProjectName=
