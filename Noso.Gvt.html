@@ -18,7 +18,9 @@
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section">Types</div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<p>
+Unit for managing a GVT (Governance Token)</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
 <ul class="useslist"><li>Classes</li><li><a href="Noso.Crypto.html">Noso.Crypto</a></li><li><a href="Noso.Debug.html">Noso.Debug</a></li><li>SysUtils</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
 <table class="classestable wide_list">
@@ -27,41 +29,41 @@
 <th class="itemdesc">Description</th>
 </tr>
 <tr class="list">
-<td class="itemname">Packed Record&nbsp;<a class="bold" href="Noso.Gvt.TGVT.html"><code>TGVT</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Packed Record&nbsp;<a class="bold" href="Noso.Gvt.TGovernanceToken.html"><code>TGovernanceToken</code></a></td>
+<td class="itemdesc"> Record representing a Governance Token (GVT) </td>
 </tr>
 </table>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#ChangeGVTOwner-Integer-String-String-">ChangeGVTOwner</a></strong>(Lnumber: Integer; OldOwner, NewOWner: String): Integer;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#CalculateGVTPrice-Integer-Boolean-">CalculateGVTPrice</a></strong>(Available: Integer; ForSale: Boolean = False): Int64;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#ChangeGVTOwner-Integer-String-String-">ChangeGVTOwner</a></strong>(Number: Integer; OldOwner, NewOwner: String): Integer;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#CountAvailableGVTs">CountAvailableGVTs</a></strong>(): Integer;</code></td>
 </tr>
-<tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#CreateGVTsFile">CreateGVTsFile</a></strong>(): Boolean;</code></td>
-</tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTIndex-Integer-">GetGVTIndex</a></strong>(Index: Integer): <a href="Noso.Gvt.TGVT.html">TGVT</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#CreateGVTFile">CreateGVTFile</a></strong>(): Boolean;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTLength">GetGVTLength</a></strong>: Integer;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTAsStream-TMemoryStream-">GetGVTAsStream</a></strong>(out Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTPrice-Integer-Boolean-">GetGVTPrice</a></strong>(available: Integer; ToSell: Boolean = False): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTByIndex-Integer-">GetGVTByIndex</a></strong>(Index: Integer): <a href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTsAsStream-TMemoryStream-">GetGVTsAsStream</a></strong>(out LStream: TMemoryStream): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#GetGVTCount">GetGVTCount</a></strong>: Integer;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Gvt.html#GetGVTsFileData">GetGVTsFileData</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Gvt.html#LoadGVTsFileData">LoadGVTsFileData</a></strong>();</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Gvt.html#SaveGVTs">SaveGVTs</a></strong>();</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Gvt.html#SaveGVTsAsData">SaveGVTsAsData</a></strong>();</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#SaveStreamAsGVTs-TMemoryStream-">SaveStreamAsGVTs</a></strong>(const LStream: TMemoryStream): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Gvt.html#SaveStreamAsGVTs-TMemoryStream-">SaveStreamAsGVTs</a></strong>(Stream: TMemoryStream): Boolean;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
@@ -73,101 +75,184 @@
 <span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Gvt.html#ArrGVTs">ArrGVTs</a></strong>: array of <a href="Noso.Gvt.TGVT.html">TGVT</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTArray">GVTArray</a></strong>: array of <a href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Gvt.html#CSGVTsArray">CSGVTsArray</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTArrayLock">GVTArrayLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Gvt.html#CSGVTsFile">CSGVTsFile</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTFile">GVTFile</a></strong>: file of <a href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Gvt.html#FileGVTs">FileGVTs</a></strong>: file of <a href="Noso.Gvt.TGVT.html">TGVT</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTFileLock">GVTFileLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTsFilename">GVTsFilename</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'gvts.psk';</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTFilename">GVTFilename</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'gvts.psk';</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Gvt.html#MyGVTsHash">MyGVTsHash</a></strong>: String = '';</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Gvt.html#GVTHashMD5">GVTHashMD5</a></strong>: String = '';</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ChangeGVTOwner-Integer-String-String-"></span><code>function <strong>ChangeGVTOwner</strong>(Lnumber: Integer; OldOwner, NewOWner: String): Integer;</code></td>
+<td class="itemcode"><span id="CalculateGVTPrice-Integer-Boolean-"></span><code>function <strong>CalculateGVTPrice</strong>(Available: Integer; ForSale: Boolean = False): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Calculates the price of a Governance Token based on the number of available GVTs. </p>
+<p>
+ 
+
+<p>
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Available</dt>
+<dd>The number of GVTs available.</dd>
+<dt>ForSale</dt>
+<dd>Whether the price is for selling (<code>True</code>) or buying (<code>False</code>).</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The calculated price of the GVT.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ChangeGVTOwner-Integer-String-String-"></span><code>function <strong>ChangeGVTOwner</strong>(Number: Integer; OldOwner, NewOwner: String): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+( Changes the owner of a Governance Token given its number. ( 
+
+<p>
+
+<p>
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Number</dt>
+<dd>The number of the GVT to change.</dd>
+<dt>OldOwner</dt>
+<dd>The current owner's address.</dd>
+<dt>NewOwner</dt>
+<dd>The new owner's address.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">0 for success, or an error code (1, 2, 3).</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="CountAvailableGVTs"></span><code>function <strong>CountAvailableGVTs</strong>(): Integer;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Counts the number of available Governance Tokens (GVTs belonging to the development fund). </p>
+<p>
+ </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">The count of available GVTs.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CreateGVTsFile"></span><code>function <strong>CreateGVTsFile</strong>(): Boolean;</code></td>
+<td class="itemcode"><span id="CreateGVTFile"></span><code>function <strong>CreateGVTFile</strong>(): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Creates a GVTs file. If it already exists, rewrite a new empty one.</p>
+ Creates an empty GVT file. If a file already exists, it is overwritten with an empty one. </p>
+<p>
+ </p>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the file was successfully created; <code>False</code> otherwise.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetGVTAsStream-TMemoryStream-"></span><code>function <strong>GetGVTAsStream</strong>(out Stream: TMemoryStream): Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Loads the GVT file into a memory stream. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Stream</dt>
+<dd>The memory stream to load the GVT file into.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">Size of the loaded stream in bytes.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetGVTByIndex-Integer-"></span><code>function <strong>GetGVTByIndex</strong>(Index: Integer): <a href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Retrieves a Governance Token record by its index in the array. </p>
+<p>
+ 
+
+<p> .</p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Index</dt>
+<dd>The index of the GVT to retrieve.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The requested GVT record.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetGVTCount"></span><code>function <strong>GetGVTCount</strong>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Returns the number of Governance Token records currently loaded in the array. </p>
+<p>
+ </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">The number of GVT records.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="LoadGVTsFileData"></span><code>procedure <strong>LoadGVTsFileData</strong>();</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Loads the GVT file data into an array. The array holds all GVT records from the file. </p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetGVTIndex-Integer-"></span><code>function <strong>GetGVTIndex</strong>(Index: Integer): <a href="Noso.Gvt.TGVT.html">TGVT</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetGVTLength"></span><code>function <strong>GetGVTLength</strong>: Integer;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetGVTPrice-Integer-Boolean-"></span><code>function <strong>GetGVTPrice</strong>(available: Integer; ToSell: Boolean = False): Int64;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetGVTsAsStream-TMemoryStream-"></span><code>function <strong>GetGVTsAsStream</strong>(out LStream: TMemoryStream): Int64;</code></td>
+<td class="itemcode"><span id="SaveGVTsAsData"></span><code>procedure <strong>SaveGVTsAsData</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Loads the GVTs file into a stream</p>
+ Saves the GVT array data back to the file. </p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetGVTsFileData"></span><code>procedure <strong>GetGVTsFileData</strong>();</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="SaveGVTs"></span><code>procedure <strong>SaveGVTs</strong>();</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="SaveStreamAsGVTs-TMemoryStream-"></span><code>function <strong>SaveStreamAsGVTs</strong>(const LStream: TMemoryStream): Boolean;</code></td>
+<td class="itemcode"><span id="SaveStreamAsGVTs-TMemoryStream-"></span><code>function <strong>SaveStreamAsGVTs</strong>(Stream: TMemoryStream): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Save a stream as the GVT file</p>
-</td></tr>
+ Saves the provided memory stream as the GVT file. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Stream</dt>
+<dd>The memory stream to save.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the file was successfully saved; <code>False</code> otherwise.</p></td></tr>
 </table>
 <h3 class="detail">Constants</h3>
 <table class="detail wide_list">
@@ -175,50 +260,64 @@ Save a stream as the GVT file</p>
 <td class="itemcode"><span id="GVTBaseValue"></span><code><strong>GVTBaseValue</strong> = 70000000000;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Base value of a Governance Token</p>
+</td></tr>
 </table>
 <h3 class="detail">Variables</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrGVTs"></span><code><strong>ArrGVTs</strong>: array of <a href="Noso.Gvt.TGVT.html">TGVT</a>;</code></td>
+<td class="itemcode"><span id="GVTArray"></span><code><strong>GVTArray</strong>: array of <a href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Array to hold loaded GVT records</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CSGVTsArray"></span><code><strong>CSGVTsArray</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="GVTArrayLock"></span><code><strong>GVTArrayLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Critical section for synchronizing array access</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CSGVTsFile"></span><code><strong>CSGVTsFile</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="GVTFile"></span><code><strong>GVTFile</strong>: file of <a href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+File variable for GVT file handling</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="FileGVTs"></span><code><strong>FileGVTs</strong>: file of <a href="Noso.Gvt.TGVT.html">TGVT</a>;</code></td>
+<td class="itemcode"><span id="GVTFileLock"></span><code><strong>GVTFileLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Critical section for synchronizing file access</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GVTsFilename"></span><code><strong>GVTsFilename</strong>: String = 'NOSODATA' + DirectorySeparator + 'gvts.psk';</code></td>
+<td class="itemcode"><span id="GVTFilename"></span><code><strong>GVTFilename</strong>: String = 'NOSODATA' + DirectorySeparator + 'gvts.psk';</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Filename for GVT storage</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="MyGVTsHash"></span><code><strong>MyGVTsHash</strong>: String = '';</code></td>
+<td class="itemcode"><span id="GVTHashMD5"></span><code><strong>GVTHashMD5</strong>: String = '';</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+MD5 hash of the Governance Token file</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>
 </span>
