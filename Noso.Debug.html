@@ -18,8 +18,10 @@
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constants</div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
-<ul class="useslist"><li>Classes</li><li>SysUtils</li></ul><h2 class="overview">Overview</h2>
+<p>
+Unit to implement debug functionalities on Noso.</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>Math</li><li>SysUtils</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
 <table class="classestable wide_list">
 <tr class="listheader">
@@ -27,344 +29,561 @@
 <th class="itemdesc">Description</th>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TCoreManager.html"><code>TCoreManager</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TFileManager.html"><code>TFileManager</code></a></td>
+<td class="itemdesc"> Record for file management. </td>
 </tr>
 <tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TFileManager.html"><code>TFileManager</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TLogNonDisk.html"><code>TLogNonDisk</code></a></td>
+<td class="itemdesc"> Record for logging non-disk operations. </td>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TLogND.html"><code>TLogND</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TPerformanceStats.html"><code>TPerformanceStats</code></a></td>
+<td class="itemdesc"> Record to hold performance statistics </td>
 </tr>
 <tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.Tperformance.html"><code>Tperformance</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Debug.TThreadManager.html"><code>TThreadManager</code></a></td>
+<td class="itemdesc"> Record for thread management. </td>
 </tr>
 </table>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#AddFileProcess-String-String-String-Int64-">AddFileProcess</a></strong>(FiType, FiFile, FiPeer: String; TimeStamp: Int64);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#AddFileProcess-String-String-String-Int64-">AddFileProcess</a></strong>(const FileType, FileName, Peer: String; const TimeStamp: Int64);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#AddNewOpenThread-String-Int64-">AddNewOpenThread</a></strong>(ThName: String; TimeStamp: Int64);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#AddNewOpenThread-String-Int64-">AddNewOpenThread</a></strong>(const ThreadName: String; const TimeStamp: Int64);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#BeginPerformance-String-">BeginPerformance</a></strong>(Tag: String);</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#CloseFileProcess-String-String-String-Int64-">CloseFileProcess</a></strong>(const FileType, FileName, Peer: String; const TimeStamp: Int64): Int64;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#CloseFileProcess-String-String-String-Int64-">CloseFileProcess</a></strong>(FiType, FiFile, FiPeer: String; TimeStamp: Int64): Int64;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#CloseOpenThread-String-">CloseOpenThread</a></strong>(const ThreadName: String);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#CloseOpenThread-String-">CloseOpenThread</a></strong>(ThName: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#CreateNewLog-String-String-">CreateNewLog</a></strong>(const Name: String; const FileName: String = '');</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#CreateNewLog-String-String-">CreateNewLog</a></strong>(LogName: String; LogFileName: String = '');</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetDeepDebugLine-String-">GetDeepDebugLine</a></strong>(out Line: String): Boolean;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#EndPerformance-String-">EndPerformance</a></strong>(Tag: String): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetFileProcessCopy">GetFileProcessCopy</a></strong>(): <a href="Noso.Debug.html#TFileManagerArray">TFileManagerArray</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetDeepDebLine-String-">GetDeepDebLine</a></strong>(out LineContent: String): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetLogLine-String-String-">GetLogLine</a></strong>(const Tag: String; out Line: String): Boolean;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetFileProcessCopy">GetFileProcessCopy</a></strong>(): <a href="Noso.Debug.html#TFileMCopy">TFileMCopy</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetProcessCopy">GetProcessCopy</a></strong>(): <a href="Noso.Debug.html#TThreadManagerArray">TThreadManagerArray</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetLogLine-String-String-">GetLogLine</a></strong>(LogTag: String; out LineContent: String): Boolean;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#InitializeDeepDebug-String-String-">InitializeDeepDebug</a></strong>(const LogFileName: String; const SysInfo: String = '');</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#GetProcessCopy">GetProcessCopy</a></strong>(): <a href="Noso.Debug.html#TProcessCopy">TProcessCopy</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#LogPerformanceToFile-String-">LogPerformanceToFile</a></strong>(const Destination: String): Boolean;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#InitDeepDeb-String-String-">InitDeepDeb</a></strong>(LFileName: String; SysInfo: String = '');</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#StartPerformanceMeasurement-String-">StartPerformanceMeasurement</a></strong>(const Tag: String);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#PerformanceToFile-String-">PerformanceToFile</a></strong>(Destination: String): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Debug.html#StopPerformanceMeasurement-String-">StopPerformanceMeasurement</a></strong>(const Tag: String): Int64;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#ToDeepDebug-String-">ToDeepDebug</a></strong>(LLine: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#ToDeepDebug-String-">ToDeepDebug</a></strong>(const Line: String);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#ToLog-String-String-">ToLog</a></strong>(LogTag, NewLine: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#ToLog-String-String-">ToLog</a></strong>(const Tag, Line: String);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#UpdateOpenThread-String-Int64-">UpdateOpenThread</a></strong>(ThName: String; TimeStamp: Int64);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Debug.html#UpdateOpenThread-String-Int64-">UpdateOpenThread</a></strong>(const ThreadName: String; const TimeStamp: Int64);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#TFileMCopy">TFileMCopy</a></strong> = array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#TFileManagerArray">TFileManagerArray</a></strong> = specialize TArray&lt;<a href="Noso.Debug.TFileManager.html">TFileManager</a>&gt;;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#TProcessCopy">TProcessCopy</a></strong> = array of <a href="Noso.Debug.TCoreManager.html">TCoreManager</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#TThreadManagerArray">TThreadManagerArray</a></strong> = specialize TArray&lt;<a href="Noso.Debug.TThreadManager.html">TThreadManager</a>&gt;;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#ArrFileMgr">ArrFileMgr</a></strong>: array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSDeepDebug">CSDeepDebug</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#ArrNDCSs">ArrNDCSs</a></strong>: array of TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSFileManager">CSFileManager</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#ArrNDLogs">ArrNDLogs</a></strong>: array of <a href="Noso.Debug.TLogND.html">TLogND</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSNonDisks">CSNonDisks</a></strong>: array of TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#ArrNDSLs">ArrNDSLs</a></strong>: array of TStringList;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSThreadManager">CSThreadManager</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#ArrPerformance">ArrPerformance</a></strong>: array of <a href="Noso.Debug.Tperformance.html">TPerformance</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebugFilename">DeepDebugFilename</a></strong>: String = '';</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#ArrProcess">ArrProcess</a></strong>: array of <a href="Noso.Debug.TCoreManager.html">TCoreManager</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebugLogStringList">DeepDebugLogStringList</a></strong>: TStringList;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CS_DeepDeb">CS_DeepDeb</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#EnablePerformanceLogging">EnablePerformanceLogging</a></strong>: Boolean = False;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CS_FileManager">CS_FileManager</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#FileManagers">FileManagers</a></strong>: array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CS_ThManager">CS_ThManager</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#NonDiskLogs">NonDiskLogs</a></strong>: array of <a href="Noso.Debug.TLogNonDisk.html">TLogNonDisk</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebFilename">DeepDebFilename</a></strong>: String = '';</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#NonDiskStringLists">NonDiskStringLists</a></strong>: array of TStringList;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#NosoDebug_UsePerformance">NosoDebug_UsePerformance</a></strong>: Boolean = False;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#PerformanceStats">PerformanceStats</a></strong>: array of <a href="Noso.Debug.TPerformanceStats.html">TPerformanceStats</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#SLDeepDebLog">SLDeepDebLog</a></strong>: TStringList;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#ProcessList">ProcessList</a></strong>: array of <a href="Noso.Debug.TThreadManager.html">TThreadManager</a>;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="AddFileProcess-String-String-String-Int64-"></span><code>procedure <strong>AddFileProcess</strong>(FiType, FiFile, FiPeer: String; TimeStamp: Int64);</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="AddNewOpenThread-String-Int64-"></span><code>procedure <strong>AddNewOpenThread</strong>(ThName: String; TimeStamp: Int64);</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="BeginPerformance-String-"></span><code>procedure <strong>BeginPerformance</strong>(Tag: String);</code></td>
+<td class="itemcode"><span id="AddFileProcess-String-String-String-Int64-"></span><code>procedure <strong>AddFileProcess</strong>(const FileType, FileName, Peer: String; const TimeStamp: Int64);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Starts a performance measure</p>
+ Adds a new file process to the file management list. </p>
+<p>
+ 
+
+<p>
+
+<p>
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FileType</dt>
+<dd>Type of the file.</dd>
+<dt>FileName</dt>
+<dd>Name of the file.</dd>
+<dt>Peer</dt>
+<dd>Peer associated with the file.</dd>
+<dt>TimeStamp</dt>
+<dd>Timestamp when the file process started.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CloseFileProcess-String-String-String-Int64-"></span><code>function <strong>CloseFileProcess</strong>(FiType, FiFile, FiPeer: String; TimeStamp: Int64): Int64;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CloseOpenThread-String-"></span><code>procedure <strong>CloseOpenThread</strong>(ThName: String);</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CreateNewLog-String-String-"></span><code>procedure <strong>CreateNewLog</strong>(LogName: String; LogFileName: String = '');</code></td>
+<td class="itemcode"><span id="AddNewOpenThread-String-Int64-"></span><code>procedure <strong>AddNewOpenThread</strong>(const ThreadName: String; const TimeStamp: Int64);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Creates a new log and assigns an optional file to save it</p>
+ Adds a new open thread to the thread management list. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>ThreadName</dt>
+<dd>Name of the thread.</dd>
+<dt>TimeStamp</dt>
+<dd>Timestamp when the thread was created.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EndPerformance-String-"></span><code>function <strong>EndPerformance</strong>(Tag: String): Int64;</code></td>
+<td class="itemcode"><span id="CloseFileProcess-String-String-String-Int64-"></span><code>function <strong>CloseFileProcess</strong>(const FileType, FileName, Peer: String; const TimeStamp: Int64): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Ends a performance</p>
+ Closes a file process and returns the elapsed time. </p>
+<p>
+ 
+
+<p>
+
+<p>
+
+<p>
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>FileType</dt>
+<dd>Type of the file.</dd>
+<dt>FileName</dt>
+<dd>Name of the file.</dd>
+<dt>Peer</dt>
+<dd>Peer associated with the file.</dd>
+<dt>TimeStamp</dt>
+<dd>Timestamp when the file process ended.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The elapsed time in milliseconds.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CloseOpenThread-String-"></span><code>procedure <strong>CloseOpenThread</strong>(const ThreadName: String);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Closes an open thread. </p>
+<p>
+ </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>ThreadName</dt>
+<dd>Name of the thread to close.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetDeepDebLine-String-"></span><code>function <strong>GetDeepDebLine</strong>(out LineContent: String): Boolean;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetFileProcessCopy"></span><code>function <strong>GetFileProcessCopy</strong>(): <a href="Noso.Debug.html#TFileMCopy">TFileMCopy</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetLogLine-String-String-"></span><code>function <strong>GetLogLine</strong>(LogTag: String; out LineContent: String): Boolean;</code></td>
+<td class="itemcode"><span id="CreateNewLog-String-String-"></span><code>procedure <strong>CreateNewLog</strong>(const Name: String; const FileName: String = '');</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Retireves the oldest line in the specified log, assigning value to LineContent</p>
+ Creates a new log with a specified name and optional file. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Name</dt>
+<dd>Name of the log.</dd>
+<dt>FileName</dt>
+<dd>Optional log file name.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetProcessCopy"></span><code>function <strong>GetProcessCopy</strong>(): <a href="Noso.Debug.html#TProcessCopy">TProcessCopy</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="InitDeepDeb-String-String-"></span><code>procedure <strong>InitDeepDeb</strong>(LFileName: String; SysInfo: String = '');</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="PerformanceToFile-String-"></span><code>function <strong>PerformanceToFile</strong>(Destination: String): Boolean;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="ToDeepDebug-String-"></span><code>procedure <strong>ToDeepDebug</strong>(LLine: String);</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="ToLog-String-String-"></span><code>procedure <strong>ToLog</strong>(LogTag, NewLine: String);</code></td>
+<td class="itemcode"><span id="GetDeepDebugLine-String-"></span><code>function <strong>GetDeepDebugLine</strong>(out Line: String): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Adds one line to the specified log</p>
+ Retrieves the oldest line from the deep debug log. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Line</dt>
+<dd>Output parameter containing the content of the log line.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the line was successfully retrieved, otherwise <code>False</code>.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetFileProcessCopy"></span><code>function <strong>GetFileProcessCopy</strong>(): <a href="Noso.Debug.html#TFileManagerArray">TFileManagerArray</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Retrieves the current list of file processes. </p>
+<p>
+ </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">An array of file management records.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetLogLine-String-String-"></span><code>function <strong>GetLogLine</strong>(const Tag: String; out Line: String): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Retrieves the oldest log line for a specified log. </p>
+<p>
+ 
+
+<p>
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Tag</dt>
+<dd>Identifier for the log.</dd>
+<dt>Line</dt>
+<dd>Output parameter containing the content of the log line.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">True if the line was successfully retrieved, otherwise False.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetProcessCopy"></span><code>function <strong>GetProcessCopy</strong>(): <a href="Noso.Debug.html#TThreadManagerArray">TThreadManagerArray</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Retrieves the current list of open threads. </p>
+<p>
+ </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">An array of thread management records.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="InitializeDeepDebug-String-String-"></span><code>procedure <strong>InitializeDeepDebug</strong>(const LogFileName: String; const SysInfo: String = '');</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Initializes deep debugging with a specified log file and optional system information. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>LogFileName</dt>
+<dd>Filename for the deep debug log.</dd>
+<dt>SysInfo</dt>
+<dd>Optional system information.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="UpdateOpenThread-String-Int64-"></span><code>procedure <strong>UpdateOpenThread</strong>(ThName: String; TimeStamp: Int64);</code></td>
+<td class="itemcode"><span id="LogPerformanceToFile-String-"></span><code>function <strong>LogPerformanceToFile</strong>(const Destination: String): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Logs performance statistics to a specified file. The output includes the tag, count, maximum time, and average time for each tag. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Destination</dt>
+<dd>File path where the performance statistics will be saved.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the logging was successful, otherwise <code>False</code>.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="StartPerformanceMeasurement-String-"></span><code>procedure <strong>StartPerformanceMeasurement</strong>(const Tag: String);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Starts performance measurement for a given tag by storing the current timestamp. If the tag already exists, it updates the start time and increments the count. </p>
+<p>
+ </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Tag</dt>
+<dd>Identifier for the performance measurement.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="StopPerformanceMeasurement-String-"></span><code>function <strong>StopPerformanceMeasurement</strong>(const Tag: String): Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Stops performance measurement for a given tag and calculates the duration. Updates the total, max, min, and average times for the tag. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Tag</dt>
+<dd>Identifier for the performance measurement.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The duration of the measurement in milliseconds.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToDeepDebug-String-"></span><code>procedure <strong>ToDeepDebug</strong>(const Line: String);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Adds a new line to the deep debug log. </p>
+<p>
+ </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Line</dt>
+<dd>Content of the line to append.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToLog-String-String-"></span><code>procedure <strong>ToLog</strong>(const Tag, Line: String);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Appends a new line to a specified log. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Tag</dt>
+<dd>Identifier for the log.</dd>
+<dt>Line</dt>
+<dd>Content of the new line to append.</dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="UpdateOpenThread-String-Int64-"></span><code>procedure <strong>UpdateOpenThread</strong>(const ThreadName: String; const TimeStamp: Int64);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Updates the timestamp of an existing thread. </p>
+<p>
+ 
+
+<p></p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>ThreadName</dt>
+<dd>Name of the thread.</dd>
+<dt>TimeStamp</dt>
+<dd>New timestamp for the thread.</dd>
+</dl>
+</td></tr>
 </table>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TFileMCopy"></span><code><strong>TFileMCopy</strong> = array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
+<td class="itemcode"><span id="TFileManagerArray"></span><code><strong>TFileManagerArray</strong> = specialize TArray&lt;<a href="Noso.Debug.TFileManager.html">TFileManager</a>&gt;;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of file management records. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TProcessCopy"></span><code><strong>TProcessCopy</strong> = array of <a href="Noso.Debug.TCoreManager.html">TCoreManager</a>;</code></td>
+<td class="itemcode"><span id="TThreadManagerArray"></span><code><strong>TThreadManagerArray</strong> = specialize TArray&lt;<a href="Noso.Debug.TThreadManager.html">TThreadManager</a>&gt;;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of thread management records. </p>
+</td></tr>
 </table>
 <h3 class="detail">Variables</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrFileMgr"></span><code><strong>ArrFileMgr</strong>: array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
+<td class="itemcode"><span id="CSDeepDebug"></span><code><strong>CSDeepDebug</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Critical section for deep debugging logs. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrNDCSs"></span><code><strong>ArrNDCSs</strong>: array of TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="CSFileManager"></span><code><strong>CSFileManager</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Critical section for file management. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrNDLogs"></span><code><strong>ArrNDLogs</strong>: array of <a href="Noso.Debug.TLogND.html">TLogND</a>;</code></td>
+<td class="itemcode"><span id="CSNonDisks"></span><code><strong>CSNonDisks</strong>: array of TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of critical sections for managing non-disk logs. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrNDSLs"></span><code><strong>ArrNDSLs</strong>: array of TStringList;</code></td>
+<td class="itemcode"><span id="CSThreadManager"></span><code><strong>CSThreadManager</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Critical section for thread management. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrPerformance"></span><code><strong>ArrPerformance</strong>: array of <a href="Noso.Debug.Tperformance.html">TPerformance</a>;</code></td>
+<td class="itemcode"><span id="DeepDebugFilename"></span><code><strong>DeepDebugFilename</strong>: String = '';</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Filename for deep debug logs. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ArrProcess"></span><code><strong>ArrProcess</strong>: array of <a href="Noso.Debug.TCoreManager.html">TCoreManager</a>;</code></td>
+<td class="itemcode"><span id="DeepDebugLogStringList"></span><code><strong>DeepDebugLogStringList</strong>: TStringList;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ String list for deep debugging logs. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CS_DeepDeb"></span><code><strong>CS_DeepDeb</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="EnablePerformanceLogging"></span><code><strong>EnablePerformanceLogging</strong>: Boolean = False;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Flag to enable or disable performance logging. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CS_FileManager"></span><code><strong>CS_FileManager</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="FileManagers"></span><code><strong>FileManagers</strong>: array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of file management records. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CS_ThManager"></span><code><strong>CS_ThManager</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="NonDiskLogs"></span><code><strong>NonDiskLogs</strong>: array of <a href="Noso.Debug.TLogNonDisk.html">TLogNonDisk</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of non-disk log entries. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="DeepDebFilename"></span><code><strong>DeepDebFilename</strong>: String = '';</code></td>
+<td class="itemcode"><span id="NonDiskStringLists"></span><code><strong>NonDiskStringLists</strong>: array of TStringList;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of string lists associated with non-disk logs. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NosoDebug_UsePerformance"></span><code><strong>NosoDebug_UsePerformance</strong>: Boolean = False;</code></td>
+<td class="itemcode"><span id="PerformanceStats"></span><code><strong>PerformanceStats</strong>: array of <a href="Noso.Debug.TPerformanceStats.html">TPerformanceStats</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array to store performance statistics. </p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="SLDeepDebLog"></span><code><strong>SLDeepDebLog</strong>: TStringList;</code></td>
+<td class="itemcode"><span id="ProcessList"></span><code><strong>ProcessList</strong>: array of <a href="Noso.Debug.TThreadManager.html">TThreadManager</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+ Array of thread management records. </p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>
 </span>

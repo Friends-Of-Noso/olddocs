@@ -57,38 +57,8 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#ArrFileMgr">ArrFileMgr</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Gvt.html#ArrGVTs">ArrGVTs</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Gvt.html">Noso.Gvt</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#ArrNDCSs">ArrNDCSs</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#ArrNDLogs">ArrNDLogs</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#ArrNDSLs">ArrNDSLs</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#ArrPerformance">ArrPerformance</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#ArrProcess">ArrProcess</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
@@ -212,6 +182,16 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#CSDeepDebug">CSDeepDebug</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Critical section for deep debugging logs. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#CSFileManager">CSFileManager</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Critical section for file management. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Gvt.html#CSGVTsArray">CSGVTsArray</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Gvt.html">Noso.Gvt</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
@@ -267,59 +247,69 @@
 <td class="itemdesc"><p>Critical section for managing access to the node list.</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#CSNonDisks">CSNonDisks</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Array of critical sections for managing non-disk logs. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#CSNosoCFGStr">CSNosoCFGStr</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p><a class="normal" href="Noso.Network.html#CSClientReadThreads">CSClientReadThreads</a> : TRTLCriticalSection; <a class="normal" href="Noso.Gvt.html#CSGVTsArray">CSGVTsArray</a> : TRTLCriticalSection;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#CSOutgoingMessages">CSOutgoingMessages</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Critical sections for synchronizing access to outgoing messages for each connection slot.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#CSOutgoingMsjs">CSOutgoingMsjs</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#CSPendingTransactions">CSPendingTransactions</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Critical section for managing access to the pending transactions pool.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#CSProcessLines">CSProcessLines</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>Critical Sections</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#CSReceivedMNs">CSReceivedMNs</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_Completed">Css_Completed</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_Percentage">Css_Percentage</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_ReachedNodes">Css_ReachedNodes</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_TotalNodes">Css_TotalNodes</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>20</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_ValidNodes">Css_ValidNodes</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#CSThreadManager">CSThreadManager</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Critical section for thread management. </p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#CSVerifyThread">CSVerifyThread</a></td>
@@ -357,16 +347,6 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#CS_DeepDeb">CS_DeepDeb</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#CS_FileManager">CS_FileManager</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Headers.html#CS_HeadersFile">CS_HeadersFile</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Headers.html">Noso.Headers</a></td>
 <td class="itemdesc"><p>'NOSODATA'+DirectorySeparator+</p></td>
@@ -397,49 +377,49 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#CS_ThManager">CS_ThManager</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.WallCon.html#CS_WalletArray">CS_WalletArray</a></td>
 <td class="itemunit"><a class="bold" href="Noso.WallCon.html">Noso.WallCon</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.WallCon.html#CS_WalletFile">CS_WalletFile</a></td>
 <td class="itemunit"><a class="bold" href="Noso.WallCon.html">Noso.WallCon</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#CurrSynctus">CurrSynctus</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Block.html#DataBaseFilename">DataBaseFilename</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Block.html">Noso.Block</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Block.html#DBDirectory">DBDirectory</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Block.html">Noso.Block</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Block.html#DBFile">DBFile</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Block.html">Noso.Block</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#DeepDebFilename">DeepDebFilename</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#DeepDebLogFilename">DeepDebLogFilename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#DeepDebugFilename">DeepDebugFilename</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Filename for deep debug logs. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#DeepDebugLogStringList">DeepDebugLogStringList</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> String list for deep debugging logs. </p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Config.html#DefaultNosoCFG">DefaultNosoCFG</a></td>
@@ -472,29 +452,39 @@
 <td class="itemdesc"><p>Indicates whether the summary is currently being downloaded.</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#EnablePerformanceLogging">EnablePerformanceLogging</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Flag to enable or disable performance logging. </p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#EngineLastUpdate">EngineLastUpdate</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#EventLogFilename">EventLogFilename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#ExceptLogFilename">ExceptLogFilename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#FileAdvOptions">FileAdvOptions</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>Options</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Gvt.html#FileGVTs">FileGVTs</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Gvt.html">Noso.Gvt</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#FileManagers">FileManagers</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Array of file management records. </p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="ExploreForm.html#FileMasK">FileMasK</a></td>
@@ -922,64 +912,74 @@
 <td class="itemdesc"><p>The TCP server instance for managing node-to-node communications.</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#NonDiskLogs">NonDiskLogs</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Array of non-disk log entries. </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#NonDiskStringLists">NonDiskStringLists</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Array of string lists associated with non-disk logs. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Config.html#NosoCFGString">NosoCFGString</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Config.html">Noso.Config</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#NosoDebug_UsePerformance">NosoDebug_UsePerformance</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Time.html#NosoT_LastServer">NosoT_LastServer</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Time.html">Noso.Time</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Time.html#NosoT_LastUpdate">NosoT_LastUpdate</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Time.html">Noso.Time</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Time.html#NosoT_TimeOffset">NosoT_TimeOffset</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Time.html">Noso.Time</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MP.SysCheck.html#OpenHashThreads">OpenHashThreads</a></td>
 <td class="itemunit"><a class="bold" href="MP.SysCheck.html">MP.SysCheck</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#OpenVerificators">OpenVerificators</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Block.html#OrderIDIndex">OrderIDIndex</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Block.html">Noso.Block</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#OutgoingMessages">OutgoingMessages</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Holds the outgoing messages for each connection slot, indexed by connection slot.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#OutgoingMsjs">OutgoingMsjs</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#PendingTransactionsPool">PendingTransactionsPool</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>A pool of pending transactions awaiting processing.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#PerformanceFIlename">PerformanceFIlename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#PerformanceStats">PerformanceStats</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Array to store performance statistics. </p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#ProcessLines">ProcessLines</a></td>
@@ -987,98 +987,98 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Debug.html#ProcessList">ProcessList</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
+<td class="itemdesc"><p> Array of thread management records. </p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOFileHash">PSOFileHash</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOHeader">PSOHeader</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOsArray">PSOsArray</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#PublicIPAddress">PublicIPAddress</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>The public IP address of the current node.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#RebuildingSumary">RebuildingSumary</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p><a class="normal" href="Noso.Network.html#DownloadingHeaders">DownloadingHeaders</a> : boolean = false; <a class="normal" href="Noso.Network.html#DownloadingSummary">DownloadingSummary</a> : Boolean = false; <a class="normal" href="Noso.Network.html#DownloadingBlocks">DownloadingBlocks</a> : boolean = false; <a class="normal" href="Noso.Network.html#DownloadingGVTs">DownloadingGVTs</a> : boolean = false; <a class="normal" href="Noso.Network.html#DownloadingPSOs">DownloadingPSOs</a> : boolean = false;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#RestartNosoAfterQuit">RestartNosoAfterQuit</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#ResumeLogFilename">ResumeLogFilename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Headers.html#ResumenFilename">ResumenFilename</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Headers.html">Noso.Headers</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCAuto">RPCAuto</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCBakDirectory">RPCBakDirectory</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCBanned">RPCBanned</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCFilter">RPCFilter</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCPass">RPCPass</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCPort">RPCPort</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCSaveNew">RPCSaveNew</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#RPCWhitelist">RPCWhitelist</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#SendOutMsgsThread">SendOutMsgsThread</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p><a class="normal" href="Noso.Network.html#ActiveClientReadThreads">ActiveClientReadThreads</a> : integer = 0; Threads</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#ServerStartTime">ServerStartTime</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Debug.html#SLDeepDebLog">SLDeepDebLog</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
