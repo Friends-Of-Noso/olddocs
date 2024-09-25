@@ -167,48 +167,38 @@
 <td class="itemdesc"><p>Critical section for managing access to the <a class="normal" href="Noso.Network.html#Connections">connections</a> list.</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#Consensus">Consensus</a></td>
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#ConsensusCompleted">ConsensusCompleted</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>Whether consensus is completed</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#ConsensusLabels">ConsensusLabels</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>Stores the consensus labels</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#ConsensusPercentage">ConsensusPercentage</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>Percentage of <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> reached</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#ConsensusResults">ConsensusResults</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>Stores the computed consensus results</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#ConsoleLogFilename">ConsoleLogFilename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#CriptoThreadLock">CriptoThreadLock</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p><a class="normal" href="Noso.Network.html#PendingTransactionsLock">PendingTransactionsLock</a> : TRTLCriticalSection;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#CryptoThread">CryptoThread</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_Completed">Css_Completed</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_Percentage">Css_Percentage</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_ReachedNodes">Css_ReachedNodes</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_TotalNodes">Css_TotalNodes</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>20</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#Css_ValidNodes">Css_ValidNodes</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
@@ -284,7 +274,7 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#DownloadingHeaders">DownloadingHeaders</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
-<td class="itemdesc"><p>Indicates whether the headers are currently being downloaded.</p></td>
+<td class="itemdesc"><p>Indicates whether the <a class="normal" href="Noso.Consensus.html#cHeaders">cHeaders</a> are currently being downloaded.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#DownloadingPSOs">DownloadingPSOs</a></td>
@@ -344,7 +334,7 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#ForceHeadersDownload">ForceHeadersDownload</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
-<td class="itemdesc"><p>Indicates whether to force a download of the headers.</p></td>
+<td class="itemdesc"><p>Indicates whether to force a download of the <a class="normal" href="Noso.Consensus.html#cHeaders">cHeaders</a>.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#Form1">Form1</a></td>
@@ -537,9 +527,9 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#LastConsensusTime">LastConsensusTime</a></td>
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#LastConsensusTimestamp">LastConsensusTimestamp</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>Timestamp of last consensus</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#LastGVTsRequestTime">LastGVTsRequestTime</a></td>
@@ -802,174 +792,174 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Consensus.html#NConsensus">NConsensus</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#NodeFTPLogFilename">NodeFTPLogFilename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#NodeList">NodeList</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>A list of known <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> in the network.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#NodeListLock">NodeListLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Critical section for managing access to the node list.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#NodeServer">NodeServer</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>The TCP server instance for managing node-to-node communications.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Debug.html#NonDiskLogs">NonDiskLogs</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Array of non-disk log entries. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Debug.html#NonDisksLock">NonDisksLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Array of critical sections for managing non-disk logs. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Debug.html#NonDiskStringLists">NonDiskStringLists</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Array of string lists associated with non-disk logs. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Config.html#NosoCFGString">NosoCFGString</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Config.html">Noso.Config</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#NosoCFGStrLock">NosoCFGStrLock</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p><a class="normal" href="Noso.Network.html#ClientReadThreadsLock">ClientReadThreadsLock</a> : TRTLCriticalSection; <a class="normal" href="Noso.Gvt.html#GVTArrayLock">GVTArrayLock</a> : TRTLCriticalSection;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Time.html#NosoT_LastServer">NosoT_LastServer</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Time.html">Noso.Time</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Time.html#NosoT_LastUpdate">NosoT_LastUpdate</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Time.html">Noso.Time</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Time.html#NosoT_TimeOffset">NosoT_TimeOffset</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Time.html">Noso.Time</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MP.SysCheck.html#OpenHashThreads">OpenHashThreads</a></td>
 <td class="itemunit"><a class="bold" href="MP.SysCheck.html">MP.SysCheck</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#OpenVerificators">OpenVerificators</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Block.html#OrderIDIndex">OrderIDIndex</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Block.html">Noso.Block</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#OutgoingMessages">OutgoingMessages</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Holds the outgoing messages for each connection slot, indexed by connection slot.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#OutgoingMessagesLock">OutgoingMessagesLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Critical sections for synchronizing access to outgoing messages for each connection slot.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#OutgoingMsjs">OutgoingMsjs</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#OutgoingMsjsLock">OutgoingMsjsLock</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#PendingTransactionsLock">PendingTransactionsLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Critical section for managing access to the pending transactions pool.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#PendingTransactionsPool">PendingTransactionsPool</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>A pool of pending transactions awaiting processing.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#PerformanceFIlename">PerformanceFIlename</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Debug.html#PerformanceStats">PerformanceStats</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Array to store performance statistics. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#ProcessLines">ProcessLines</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#ProcessLinesLock">ProcessLinesLock</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>Critical Sections</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Debug.html#ProcessList">ProcessList</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Array of thread management records. </p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOFileHash">PSOFileHash</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOFileLock">PSOFileLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOHeader">PSOHeader</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOHeadersLock">PSOHeadersLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOsArray">PSOsArray</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Pso.html#PSOsArrayLock">PSOsArrayLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.html#PublicIPAddress">PublicIPAddress</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>The public IP address of the current node.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#ReachedNodes">ReachedNodes</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p><a class="normal" href="MP.Protocol.html#Nodes">Nodes</a> reached during consensus</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#RebuildingSumary">RebuildingSumary</a></td>
@@ -1102,39 +1092,49 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#TotalNodes">TotalNodes</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>Total number of <a class="normal" href="MP.Protocol.html#Nodes">nodes</a></p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#UnconfirmedIPs">UnconfirmedIPs</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#UpdateLogsThread">UpdateLogsThread</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#UpdatesDirectory">UpdatesDirectory</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#U_DataPanel">U_DataPanel</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#U_DirPanel">U_DirPanel</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.html#U_MNsGrid">U_MNsGrid</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>WaitingMNs : array of String;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.html#U_MNsGrid_Last">U_MNsGrid_Last</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Consensus.html#ValidNodes">ValidNodes</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>Valid <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> in the consensus process</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.html#VerifiedNodes">VerifiedNodes</a></td>

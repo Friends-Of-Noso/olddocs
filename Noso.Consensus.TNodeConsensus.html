@@ -24,16 +24,18 @@
 <p class="declaration">
 <code>type TNodeConsensus = record</code></p>
 <h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><h2 class="overview">Overview</h2>
+<p>
+Record type to store information about a node in the network.</p>
+<h2 class="overview">Overview</h2>
 <span id="PasDoc-Fields"></span><h3 class="summary">Fields</h3>
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#Block">Block</a></strong>: Integer;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#BlockNumber">BlockNumber</a></strong>: Integer;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#ConStr">ConStr</a></strong>: String[32];</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#ConnectionHash">ConnectionHash</a></strong>: String[32];</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -41,15 +43,15 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#host">host</a></strong>: String;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#Host">Host</a></strong>: String;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#Peers">Peers</a></strong>: Integer;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#PeerCount">PeerCount</a></strong>: Integer;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#port">port</a></strong>: Integer;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.TNodeConsensus.html#Port">Port</a></strong>: Integer;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -57,18 +59,22 @@
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Block"></span><code><strong>Block</strong>: Integer;</code></td>
+<td class="itemcode"><span id="BlockNumber"></span><code><strong>BlockNumber</strong>: Integer;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The block number reported by the node</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="ConStr"></span><code><strong>ConStr</strong>: String[32];</code></td>
+<td class="itemcode"><span id="ConnectionHash"></span><code><strong>ConnectionHash</strong>: String[32];</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+A 32-character connection hash</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -76,31 +82,39 @@
 <td class="itemcode"><span id="Data"></span><code><strong>Data</strong>: String;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+<code>Data</code> returned from the node</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="host"></span><code><strong>host</strong>: String;</code></td>
+<td class="itemcode"><span id="Host"></span><code><strong>Host</strong>: String;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Node's hostname or IP address</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Peers"></span><code><strong>Peers</strong>: Integer;</code></td>
+<td class="itemcode"><span id="PeerCount"></span><code><strong>PeerCount</strong>: Integer;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The number of peers the node is connected to</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="port"></span><code><strong>port</strong>: Integer;</code></td>
+<td class="itemcode"><span id="Port"></span><code><strong>Port</strong>: Integer;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Node's <code>port</code> number</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>
 </span>

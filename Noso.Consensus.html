@@ -18,8 +18,10 @@
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
-<ul class="useslist"><li>Classes</li><li><a href="Noso.Crypto.html">Noso.Crypto</a></li><li><a href="Noso.Debug.html">Noso.Debug</a></li><li><a href="Noso.General.html">Noso.General</a></li><li><a href="Noso.Time.html">Noso.Time</a></li><li>strutils</li><li>SysUtils</li></ul><h2 class="overview">Overview</h2>
+<p>
+Noso Unit to get a consensus</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li><a href="Noso.Crypto.html">Noso.Crypto</a></li><li><a href="Noso.Debug.html">Noso.Debug</a></li><li><a href="Noso.General.html">Noso.General</a></li><li><a href="Noso.Time.html">Noso.Time</a></li><li>StrUtils</li><li>SysUtils</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
 <table class="classestable wide_list">
 <tr class="listheader">
@@ -27,47 +29,47 @@
 <th class="itemdesc">Description</th>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Consensus.TConsensusData.html"><code>TConsensusData</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Class&nbsp;<a class="bold" href="Noso.Consensus.TAutoConsensusThread.html"><code>TAutoConsensusThread</code></a></td>
+<td class="itemdesc">This thread automatically computes consensus at regular intervals based on block age and timestamp.</td>
 </tr>
 <tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Consensus.TNodeConsensus.html"><code>TNodeConsensus</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Consensus.TConsensusData.html"><code>TConsensusData</code></a></td>
+<td class="itemdesc">Record to store consensus values and their occurrence <a class="normal" href="Noso.Consensus.TConsensusData.html#Count">count</a>.</td>
 </tr>
 <tr class="list">
-<td class="itemname">Class&nbsp;<a class="bold" href="Noso.Consensus.TThreadAutoConsensus.html"><code>TThreadAutoConsensus</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Consensus.TNodeConsensus.html"><code>TNodeConsensus</code></a></td>
+<td class="itemdesc">Record type to store information about a node in the network.</td>
 </tr>
 <tr class="list2">
-<td class="itemname">Class&nbsp;<a class="bold" href="Noso.Consensus.TThreadNodeStatus.html"><code>TThreadNodeStatus</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Class&nbsp;<a class="bold" href="Noso.Consensus.TNodeStatusThread.html"><code>TNodeStatusThread</code></a></td>
+<td class="itemdesc">This class represents a thread that communicates with a specific node to obtain its status.</td>
 </tr>
 </table>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#CalculateConsensus-String-">CalculateConsensus</a></strong>(NodesList: String = ''): <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#ComputeConsensus-String-">ComputeConsensus</a></strong>(NodeList: String = ''): <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetConHash-String-">GetConHash</a></strong>(ILine: String): String;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetActiveThreadCount">GetActiveThreadCount</a></strong>(): Integer;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetConsensus-Integer-">GetConsensus</a></strong>(LData: Integer = 0): String;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetConsensusData-Integer-">GetConsensusData</a></strong>(Index: Integer = 0): String;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetNodesArrayCount">GetNodesArrayCount</a></strong>(): Integer;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetConsensusHash-String-">GetConsensusHash</a></strong>(Line: String): String;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetNodesArrayIndex-Integer-">GetNodesArrayIndex</a></strong>(LIndex: Integer): <a href="Noso.Consensus.TNodeConsensus.html">TNodeConsensus</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetNodeCount">GetNodeCount</a></strong>(): Integer;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetRandonNode">GetRandonNode</a></strong>(): String;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetNodeDataByIndex-Integer-">GetNodeDataByIndex</a></strong>(Index: Integer): <a href="Noso.Consensus.TNodeConsensus.html">TNodeConsensus</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#OpenThreadsValue">OpenThreadsValue</a></strong>(): Integer;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Consensus.html#GetRandomNode">GetRandomNode</a></strong>(): String;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Consensus.html#SetNodesArray-String-">SetNodesArray</a></strong>(NodesList: String);</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Consensus.html#SetNodeList-String-">SetNodeList</a></strong>(NodeListString: String);</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code>procedure <strong><a href="Noso.Consensus.html#StartAutoConsensus">StartAutoConsensus</a></strong>();</code></td>
@@ -115,95 +117,136 @@
 <span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#Consensus">Consensus</a></strong>: <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#ConsensusCompleted">ConsensusCompleted</a></strong>: Boolean = False;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#Css_Completed">Css_Completed</a></strong>: Boolean = False;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#ConsensusLabels">ConsensusLabels</a></strong>: array[0..20] of
+  String = ('Resume', 'Peers', 'LBlock', 'Pending', 'Delta', 'Headers',
+    'Version', 'UTCTime', 'MNsHash', 'MNsCount', 'LBHash', 'BestDiff',
+    'LBTimeEnd', 'LBMiner', 'ChecksCount', 'LBPoW', 'LBDiff', 'Summary',
+    'GVTs', 'NosoCFG', 'PSOHash');</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#Css_Percentage">Css_Percentage</a></strong>: Integer = 0;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#ConsensusPercentage">ConsensusPercentage</a></strong>: Integer = 0;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#Css_ReachedNodes">Css_ReachedNodes</a></strong>: Integer = 0;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#ConsensusResults">ConsensusResults</a></strong>: <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#Css_TotalNodes">Css_TotalNodes</a></strong>: Integer = 0;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#LastConsensusTimestamp">LastConsensusTimestamp</a></strong>: Int64 = 0;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#Css_ValidNodes">Css_ValidNodes</a></strong>: Integer = 0;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#ReachedNodes">ReachedNodes</a></strong>: Integer = 0;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#LastConsensusTime">LastConsensusTime</a></strong>: Int64 = 0;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#TotalNodes">TotalNodes</a></strong>: Integer = 0;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Consensus.html#NConsensus">NConsensus</a></strong>: array[0..20] of
-  String = ('Resume', 'Peers', 'LBlock', 'Pending', 'Delta',
-    'Headers', 'Version', 'UTCTime', 'MNsHash', 'MNsCount',
-    'LBHash', 'BestDiff', 'LBTimeEnd', 'LBMiner', 'ChecksCount',
-    'LBPoW', 'LBDiff', 'Summary', 'GVTs', 'NosoCFG',
-    'PSOHash');</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Consensus.html#ValidNodes">ValidNodes</a></strong>: Integer = 0;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CalculateConsensus-String-"></span><code>function <strong>CalculateConsensus</strong>(NodesList: String = ''): <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetConHash-String-"></span><code>function <strong>GetConHash</strong>(ILine: String): String;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetConsensus-Integer-"></span><code>function <strong>GetConsensus</strong>(LData: Integer = 0): String;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetNodesArrayCount"></span><code>function <strong>GetNodesArrayCount</strong>(): Integer;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetNodesArrayIndex-Integer-"></span><code>function <strong>GetNodesArrayIndex</strong>(LIndex: Integer): <a href="Noso.Consensus.TNodeConsensus.html">TNodeConsensus</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetRandonNode"></span><code>function <strong>GetRandonNode</strong>(): String;</code></td>
+<td class="itemcode"><span id="ComputeConsensus-String-"></span><code>function <strong>ComputeConsensus</strong>(NodeList: String = ''): <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Gets a random ip and port node</p>
+Compute consensus data from the node list.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>NodeList</dt>
+<dd>Optional node list as a string.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">Array of consensus results.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetActiveThreadCount"></span><code>function <strong>GetActiveThreadCount</strong>(): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the number of active threads. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">the number of active threads.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetConsensusData-Integer-"></span><code>function <strong>GetConsensusData</strong>(Index: Integer = 0): String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the consensus result for the given index.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Index</dt>
+<dd>The index of the consensus data.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">A string representing the consensus value.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetConsensusHash-String-"></span><code>function <strong>GetConsensusHash</strong>(Line: String): String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Computes a consensus hash based on the given status line.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Line</dt>
+<dd>The status line received from the node.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">A string representing the computed hash.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetNodeCount"></span><code>function <strong>GetNodeCount</strong>(): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns the number of <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> in the node list.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="OpenThreadsValue"></span><code>function <strong>OpenThreadsValue</strong>(): Integer;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="SetNodesArray-String-"></span><code>procedure <strong>SetNodesArray</strong>(NodesList: String);</code></td>
+<td class="itemcode"><span id="GetNodeDataByIndex-Integer-"></span><code>function <strong>GetNodeDataByIndex</strong>(Index: Integer): <a href="Noso.Consensus.TNodeConsensus.html">TNodeConsensus</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Set the values for the array of <a class="normal" href="MP.Protocol.html#Nodes">nodes</a></p>
+Returns the node data for the given index.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Index</dt>
+<dd>The index of the node.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The consensus data for the specified node.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetRandomNode"></span><code>function <strong>GetRandomNode</strong>(): String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Returns a randomly selected node from the node list as a string.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SetNodeList-String-"></span><code>procedure <strong>SetNodeList</strong>(NodeListString: String);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Sets the node list based on the input string. </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>NodeListString</dt>
+<dd>The node list as a string.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -211,14 +254,18 @@ Set the values for the array of <a class="normal" href="MP.Protocol.html#Nodes">
 <td class="itemcode"><span id="StartAutoConsensus"></span><code>procedure <strong>StartAutoConsensus</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Starts the automatic consensus thread.</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="StopAutoConsensus"></span><code>procedure <strong>StopAutoConsensus</strong>();</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Stops the automatic consensus thread.</p>
+</td></tr>
 </table>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
@@ -226,7 +273,9 @@ Set the values for the array of <a class="normal" href="MP.Protocol.html#Nodes">
 <td class="itemcode"><span id="TConsensus"></span><code><strong>TConsensus</strong> = array of String[32];</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Array that stores consensus results.</p>
+</td></tr>
 </table>
 <h3 class="detail">Constants</h3>
 <table class="detail wide_list">
@@ -234,127 +283,158 @@ Set the values for the array of <a class="normal" href="MP.Protocol.html#Nodes">
 <td class="itemcode"><span id="cCFGHash"></span><code><strong>cCFGHash</strong> = 19;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for Noso configuration hash in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cGVTsHash"></span><code><strong>cGVTsHash</strong> = 18;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for GVTs hash in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cHeaders"></span><code><strong>cHeaders</strong> = 5;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for headers in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cLastBlock"></span><code><strong>cLastBlock</strong> = 2;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for last block in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cLBHash"></span><code><strong>cLBHash</strong> = 10;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for last block hash in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cLBTimeEnd"></span><code><strong>cLBTimeEnd</strong> = 12;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for last block time end in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cMNsCount"></span><code><strong>cMNsCount</strong> = 9;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for MNs count in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cMNsHash"></span><code><strong>cMNsHash</strong> = 8;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for MNs hash in consensus results</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="cSumHash"></span><code><strong>cSumHash</strong> = 17;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+The index for summary hash in consensus results</p>
+</td></tr>
 </table>
 <h3 class="detail">Variables</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Consensus"></span><code><strong>Consensus</strong>: <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="Css_Completed"></span><code><strong>Css_Completed</strong>: Boolean = False;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="Css_Percentage"></span><code><strong>Css_Percentage</strong>: Integer = 0;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="Css_ReachedNodes"></span><code><strong>Css_ReachedNodes</strong>: Integer = 0;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="Css_TotalNodes"></span><code><strong>Css_TotalNodes</strong>: Integer = 0;</code></td>
+<td class="itemcode"><span id="ConsensusCompleted"></span><code><strong>ConsensusCompleted</strong>: Boolean = False;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-20</p>
+Whether consensus is completed</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Css_ValidNodes"></span><code><strong>Css_ValidNodes</strong>: Integer = 0;</code></td>
+<td class="itemcode"><span id="ConsensusLabels"></span><code><strong>ConsensusLabels</strong>: array[0..20] of
+  String = ('Resume', 'Peers', 'LBlock', 'Pending', 'Delta', 'Headers',
+    'Version', 'UTCTime', 'MNsHash', 'MNsCount', 'LBHash', 'BestDiff',
+    'LBTimeEnd', 'LBMiner', 'ChecksCount', 'LBPoW', 'LBDiff', 'Summary',
+    'GVTs', 'NosoCFG', 'PSOHash');</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Stores the consensus labels</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="LastConsensusTime"></span><code><strong>LastConsensusTime</strong>: Int64 = 0;</code></td>
+<td class="itemcode"><span id="ConsensusPercentage"></span><code><strong>ConsensusPercentage</strong>: Integer = 0;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Percentage of <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> reached</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NConsensus"></span><code><strong>NConsensus</strong>: array[0..20] of
-  String = ('Resume', 'Peers', 'LBlock', 'Pending', 'Delta',
-    'Headers', 'Version', 'UTCTime', 'MNsHash', 'MNsCount',
-    'LBHash', 'BestDiff', 'LBTimeEnd', 'LBMiner', 'ChecksCount',
-    'LBPoW', 'LBDiff', 'Summary', 'GVTs', 'NosoCFG',
-    'PSOHash');</code></td>
+<td class="itemcode"><span id="ConsensusResults"></span><code><strong>ConsensusResults</strong>: <a href="Noso.Consensus.html#TConsensus">TConsensus</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Stores the computed consensus results</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="LastConsensusTimestamp"></span><code><strong>LastConsensusTimestamp</strong>: Int64 = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Timestamp of last consensus</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ReachedNodes"></span><code><strong>ReachedNodes</strong>: Integer = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="MP.Protocol.html#Nodes">Nodes</a> reached during consensus</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TotalNodes"></span><code><strong>TotalNodes</strong>: Integer = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Total number of <a class="normal" href="MP.Protocol.html#Nodes">nodes</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ValidNodes"></span><code><strong>ValidNodes</strong>: Integer = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Valid <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> in the consensus process</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>
 </span>

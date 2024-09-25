@@ -44,7 +44,7 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.TArrayCriptoOp.html">TArrayCriptoOp</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
-<td class="itemdesc"><p><a class="normal" href="Noso.Masternodes.TMNCheck.html">TMNCheck</a> = Record ValidatorIP : string; // Validator IP Block : integer; SignAddress : string; PubKey : string; ValidNodes : string; Signature : string; end;</p></td>
+<td class="itemdesc"><p><a class="normal" href="Noso.Masternodes.TMNCheck.html">TMNCheck</a> = Record ValidatorIP : string; // Validator IP Block : integer; SignAddress : string; PubKey : string; <a class="normal" href="Noso.Consensus.html#ValidNodes">ValidNodes</a> : string; Signature : string; end;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.TArrayPos.html">TArrayPos</a></td>
@@ -52,129 +52,139 @@
 <td class="itemdesc"><p>BlockOrdersArray = Array of OrderData;</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Consensus.TAutoConsensusThread.html">TAutoConsensusThread</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>This thread automatically computes consensus at regular intervals based on block age and timestamp.</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Summary.TBlockRecord.html">TBlockRecord</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Summary.html">Noso.Summary</a></td>
 <td class="itemdesc"><p>Holds information about a block, including its disk position and associated summary data.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Headers.TBlockSummary.html">TBlockSummary</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Headers.html">Noso.Headers</a></td>
 <td class="itemdesc"><p> Record to hold summary data for a block </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.TBotData.html">TBotData</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Stores data related to a bot, such as its IP address and the timestamp of the last refused connection.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.TClientReadThread.html">TClientReadThread</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Thread for handling client read operations in a connection slot.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.TConnectionData.html">TConnectionData</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Represents the data of a network connection.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Consensus.TConsensusData.html">TConsensusData</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>Record to store consensus values and their occurrence <a class="normal" href="Noso.Consensus.TConsensusData.html#Count">count</a>.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.TCryptoThread.html">TCryptoThread</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Block.TDBRecord.html">TDBRecord</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Block.html">Noso.Block</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="ExploreForm.TExplorerForm.html">TExplorerForm</a></td>
 <td class="itemunit"><a class="bold" href="ExploreForm.html">ExploreForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Debug.TFileManager.html">TFileManager</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Record for file management. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.TForm1.html">TForm1</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p><code>TForm1</code></p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MP.Gui.TFormInicio.html">TFormInicio</a></td>
 <td class="itemunit"><a class="bold" href="MP.Gui.html">MP.Gui</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MP.Gui.TFormSlots.html">TFormSlots</a></td>
 <td class="itemunit"><a class="bold" href="MP.Gui.html">MP.Gui</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Gvt.TGovernanceToken.html">TGovernanceToken</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Gvt.html">Noso.Gvt</a></td>
 <td class="itemdesc"><p> Record representing a Governance Token (GVT) </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MP.Utils.Signing.TKeyPair.html">TKeyPair</a></td>
 <td class="itemunit"><a class="bold" href="MP.Utils.Signing.html">MP.Utils.Signing</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Debug.TLogNonDisk.html">TLogNonDisk</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Record for logging non-disk operations. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.TMasterNode.html">TMasterNode</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.TMNCheck.html">TMNCheck</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.TMNode.html">TMNode</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.TMNsData.html">TMNsData</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Pso.TMNsLock.html">TMNsLock</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Pso.html">Noso.Pso</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.General.TMultiOrderData.html">TMultiOrderData</a></td>
 <td class="itemunit"><a class="bold" href="Noso.General.html">Noso.General</a></td>
 <td class="itemdesc"><p>Record structure for multi-order data</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Consensus.TNodeConsensus.html">TNodeConsensus</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
+<td class="itemdesc"><p>Record type to store information about a node in the network.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Network.TNodeData.html">TNodeData</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Stores basic data for a network node.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.TNodeServerEvents.html">TNodeServerEvents</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Network.html">Noso.Network</a></td>
 <td class="itemdesc"><p>Handles various TCP server events for the node, such as connect, disconnect, execution, and exceptions.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="Noso.Consensus.TNodeStatusThread.html">TNodeStatusThread</a></td>
+<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
+<td class="itemdesc"><p>This class represents a thread that communicates with a specific node to obtain its status.</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.General.TOrderData.html">TOrderData</a></td>
@@ -222,43 +232,33 @@
 <td class="itemdesc"><p>Holds the data for each address' summary</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="Noso.Consensus.TThreadAutoConsensus.html">TThreadAutoConsensus</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.TThreadDirective.html">TThreadDirective</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MP.SysCheck.TThreadHashtest.html">TThreadHashtest</a></td>
 <td class="itemunit"><a class="bold" href="MP.SysCheck.html">MP.SysCheck</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="MPForm.TThreadIndexer.html">TThreadIndexer</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="MPForm.TThreadKeepConnect.html">TThreadKeepConnect</a></td>
 <td class="itemunit"><a class="bold" href="MPForm.html">MPForm</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="Noso.Debug.TThreadManager.html">TThreadManager</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Debug.html">Noso.Debug</a></td>
 <td class="itemdesc"><p> Record for thread management. </p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Masternodes.TThreadMNVerificator.html">TThreadMNVerificator</a></td>
 <td class="itemunit"><a class="bold" href="Noso.Masternodes.html">Noso.Masternodes</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="Noso.Consensus.TThreadNodeStatus.html">TThreadNodeStatus</a></td>
-<td class="itemunit"><a class="bold" href="Noso.Consensus.html">Noso.Consensus</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
