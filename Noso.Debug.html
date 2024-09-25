@@ -108,25 +108,19 @@ Unit to implement debug functionalities on Noso.</p>
 <span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSDeepDebug">CSDeepDebug</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSFileManager">CSFileManager</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSNonDisks">CSNonDisks</a></strong>: array of TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#CSThreadManager">CSThreadManager</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebugFilename">DeepDebugFilename</a></strong>: String = '';</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebugLogStringList">DeepDebugLogStringList</a></strong>: TStringList;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebugLock">DeepDebugLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#DeepDebugLogStringList">DeepDebugLogStringList</a></strong>: TStringList;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Debug.html#EnablePerformanceLogging">EnablePerformanceLogging</a></strong>: Boolean = False;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#FileManagerLock">FileManagerLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Debug.html#FileManagers">FileManagers</a></strong>: array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
@@ -135,13 +129,19 @@ Unit to implement debug functionalities on Noso.</p>
 <td class="itemcode"><code><strong><a href="Noso.Debug.html#NonDiskLogs">NonDiskLogs</a></strong>: array of <a href="Noso.Debug.TLogNonDisk.html">TLogNonDisk</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#NonDiskStringLists">NonDiskStringLists</a></strong>: array of TStringList;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#NonDisksLock">NonDisksLock</a></strong>: array of TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Debug.html#PerformanceStats">PerformanceStats</a></strong>: array of <a href="Noso.Debug.TPerformanceStats.html">TPerformanceStats</a>;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#NonDiskStringLists">NonDiskStringLists</a></strong>: array of TStringList;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#PerformanceStats">PerformanceStats</a></strong>: array of <a href="Noso.Debug.TPerformanceStats.html">TPerformanceStats</a>;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Debug.html#ProcessList">ProcessList</a></strong>: array of <a href="Noso.Debug.TThreadManager.html">TThreadManager</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Debug.html#ThreadManagerLock">ThreadManagerLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -479,47 +479,20 @@ Unit to implement debug functionalities on Noso.</p>
 <h3 class="detail">Variables</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CSDeepDebug"></span><code><strong>CSDeepDebug</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
- Critical section for deep debugging logs. </p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSFileManager"></span><code><strong>CSFileManager</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
- Critical section for file management. </p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSNonDisks"></span><code><strong>CSNonDisks</strong>: array of TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
- Array of critical sections for managing non-disk logs. </p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSThreadManager"></span><code><strong>CSThreadManager</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
- Critical section for thread management. </p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
 <td class="itemcode"><span id="DeepDebugFilename"></span><code><strong>DeepDebugFilename</strong>: String = '';</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
  Filename for deep debug logs. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DeepDebugLock"></span><code><strong>DeepDebugLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Critical section for deep debugging logs. </p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -542,6 +515,15 @@ Unit to implement debug functionalities on Noso.</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="FileManagerLock"></span><code><strong>FileManagerLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Critical section for file management. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="FileManagers"></span><code><strong>FileManagers</strong>: array of <a href="Noso.Debug.TFileManager.html">TFileManager</a>;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -556,6 +538,15 @@ Unit to implement debug functionalities on Noso.</p>
 <tr><td colspan="1">
 <p>
  Array of non-disk log entries. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="NonDisksLock"></span><code><strong>NonDisksLock</strong>: array of TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Array of critical sections for managing non-disk logs. </p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -583,6 +574,15 @@ Unit to implement debug functionalities on Noso.</p>
 <tr><td colspan="1">
 <p>
  Array of thread management records. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ThreadManagerLock"></span><code><strong>ThreadManagerLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ Critical section for thread management. </p>
 </td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>

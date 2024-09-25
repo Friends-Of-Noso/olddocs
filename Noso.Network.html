@@ -268,52 +268,40 @@ Unit for network utils.</p>
 <td class="itemcode"><code><strong><a href="Noso.Network.html#BotList">BotList</a></strong>: specialize TArray&lt;<a href="Noso.Network.TBotData.html">TBotData</a>&gt;;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#BotListLock">BotListLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#ClientChannels">ClientChannels</a></strong>: <a href="Noso.Network.html#TConnectionChannelList">TConnectionChannelList</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#ClientReadThreadsLock">ClientReadThreadsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#Connections">Connections</a></strong>: <a href="Noso.Network.html#TConnectionList">TConnectionList</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSBotList">CSBotList</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Network.html#ConnectionsLock">ConnectionsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSClientReadThreads">CSClientReadThreads</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSConnections">CSConnections</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSIncomingMessages">CSIncomingMessages</a></strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSMultiOrderTransactions">CSMultiOrderTransactions</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSNodeList">CSNodeList</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSOutgoingMessages">CSOutgoingMessages</a></strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#CSPendingTransactions">CSPendingTransactions</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#DownloadingBlocks">DownloadingBlocks</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#DownloadingGVTs">DownloadingGVTs</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#DownloadingHeaders">DownloadingHeaders</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#DownloadingPSOs">DownloadingPSOs</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#DownloadingSummary">DownloadingSummary</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#ForceHeadersDownload">ForceHeadersDownload</a></strong>: Boolean = False;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#IncomingMessagesLock">IncomingMessagesLock</a></strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#LastAccountSummaryRequestTime">LastAccountSummaryRequestTime</a></strong>: <a href="Noso.Network.html#TTimestampInteger">TTimestampInteger</a> = 0;</code></td>
@@ -364,16 +352,28 @@ Unit for network utils.</p>
 <td class="itemcode"><code><strong><a href="Noso.Network.html#MasternodeVerificationCount">MasternodeVerificationCount</a></strong>: Integer = 0;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Network.html#MultiOrderTransactionsPool">MultiOrderTransactionsPool</a></strong>: specialize TArray&lt;<a href="Noso.General.TMultiOrderData.html">TMultiOrderData</a>&gt;;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Network.html#MultiOrderTransactionsLock">MultiOrderTransactionsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#MultiOrderTransactionsPool">MultiOrderTransactionsPool</a></strong>: specialize TArray&lt;<a href="Noso.General.TMultiOrderData.html">TMultiOrderData</a>&gt;;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#NodeList">NodeList</a></strong>: specialize TArray&lt;<a href="Noso.Network.TNodeData.html">TNodeData</a>&gt;;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#NodeListLock">NodeListLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#NodeServer">NodeServer</a></strong>: TIdTCPServer;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#OutgoingMessages">OutgoingMessages</a></strong>: <a href="Noso.Network.html#TConnectionOutgoingMessagesList">TConnectionOutgoingMessagesList</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#OutgoingMessagesLock">OutgoingMessagesLock</a></strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Network.html#PendingTransactionsLock">PendingTransactionsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Network.html#PendingTransactionsPool">PendingTransactionsPool</a></strong>: specialize TArray&lt;<a href="Noso.General.TOrderData.html">TOrderData</a>&gt;;</code></td>
@@ -1360,11 +1360,29 @@ A list of bot-related data, representing known bot <a class="normal" href="MP.Pr
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="BotListLock"></span><code><strong>BotListLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical section for managing access to the bot list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="ClientChannels"></span><code><strong>ClientChannels</strong>: <a href="Noso.Network.html#TConnectionChannelList">TConnectionChannelList</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
 Holds the TCP client channels for each connection slot, indexed by connection slot.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ClientReadThreadsLock"></span><code><strong>ClientReadThreadsLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical section for managing access to client read threads.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -1378,74 +1396,11 @@ Holds the connection data for each client, indexed by connection slot.</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CSBotList"></span><code><strong>CSBotList</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical section for managing access to the bot list.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSClientReadThreads"></span><code><strong>CSClientReadThreads</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical section for managing access to client read threads.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSConnections"></span><code><strong>CSConnections</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="ConnectionsLock"></span><code><strong>ConnectionsLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
 Critical section for managing access to the <a class="normal" href="Noso.Network.html#Connections">connections</a> list.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSIncomingMessages"></span><code><strong>CSIncomingMessages</strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical sections for synchronizing access to incoming messages for each connection slot.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSMultiOrderTransactions"></span><code><strong>CSMultiOrderTransactions</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical section for managing access to the multi-order transactions pool.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSNodeList"></span><code><strong>CSNodeList</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical section for managing access to the node list.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSOutgoingMessages"></span><code><strong>CSOutgoingMessages</strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical sections for synchronizing access to outgoing messages for each connection slot.</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSPendingTransactions"></span><code><strong>CSPendingTransactions</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical section for managing access to the pending transactions pool.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -1500,6 +1455,15 @@ Indicates whether the summary is currently being downloaded.</p>
 <tr><td colspan="1">
 <p>
 Indicates whether to force a download of the headers.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IncomingMessagesLock"></span><code><strong>IncomingMessagesLock</strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical sections for synchronizing access to incoming messages for each connection slot.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -1648,6 +1612,15 @@ Count of masternode verification processes completed.</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="MultiOrderTransactionsLock"></span><code><strong>MultiOrderTransactionsLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical section for managing access to the multi-order transactions pool.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="MultiOrderTransactionsPool"></span><code><strong>MultiOrderTransactionsPool</strong>: specialize TArray&lt;<a href="Noso.General.TMultiOrderData.html">TMultiOrderData</a>&gt;;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1666,6 +1639,15 @@ A list of known <a class="normal" href="MP.Protocol.html#Nodes">nodes</a> in the
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="NodeListLock"></span><code><strong>NodeListLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical section for managing access to the node list.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="NodeServer"></span><code><strong>NodeServer</strong>: TIdTCPServer;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1680,6 +1662,24 @@ The TCP server instance for managing node-to-node communications.</p>
 <tr><td colspan="1">
 <p>
 Holds the outgoing messages for each connection slot, indexed by connection slot.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OutgoingMessagesLock"></span><code><strong>OutgoingMessagesLock</strong>: <a href="Noso.Network.html#TConnectionCriticalSectionList">TConnectionCriticalSectionList</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical sections for synchronizing access to outgoing messages for each connection slot.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PendingTransactionsLock"></span><code><strong>PendingTransactionsLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical section for managing access to the pending transactions pool.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">

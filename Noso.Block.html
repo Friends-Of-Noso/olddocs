@@ -99,12 +99,6 @@
 <td class="itemcode"><code><strong><a href="Noso.Block.html#BlocksZipFile">BlocksZipFile</a></strong>: String = 'blocks.zip';</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Block.html#CSDBFile">CSDBFile</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Block.html#CSDBIndex">CSDBIndex</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Block.html#DataBaseFilename">DataBaseFilename</a></strong>: String = 'blocks_db.nos';</code></td>
 </tr>
 <tr class="list2">
@@ -112,6 +106,12 @@
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Block.html#DBFile">DBFile</a></strong>: file of <a href="Noso.Block.TDBRecord.html">TDBRecord</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Block.html#DBFileLock">DBFileLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Block.html#DBIndexLock">DBIndexLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Block.html#OrderIDIndex">OrderIDIndex</a></strong>: array of <a href="Noso.Summary.html#TIndexRecord">TindexRecord</a>;</code></td>
@@ -274,20 +274,6 @@ updates file and database to most recent block on disk</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CSDBFile"></span><code><strong>CSDBFile</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSDBIndex"></span><code><strong>CSDBIndex</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
 <td class="itemcode"><span id="DataBaseFilename"></span><code><strong>DataBaseFilename</strong>: String = 'blocks_db.nos';</code></td>
 </tr>
 <tr><td colspan="1">
@@ -303,6 +289,20 @@ updates file and database to most recent block on disk</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="DBFile"></span><code><strong>DBFile</strong>: file of <a href="Noso.Block.TDBRecord.html">TDBRecord</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DBFileLock"></span><code><strong>DBFileLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DBIndexLock"></span><code><strong>DBIndexLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>

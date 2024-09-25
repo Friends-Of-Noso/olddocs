@@ -138,28 +138,28 @@
 <span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Pso.html#CS_LockedMNs">CS_LockedMNs</a></strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Pso.html#LockedMNsLock">LockedMNsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Pso.html#CS_PSOFile">CS_PSOFile</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Pso.html#CS_PSOHeaders">CS_PSOHeaders</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Pso.html#CS_PSOsArray">CS_PSOsArray</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Pso.html#MNSLockArray">MNSLockArray</a></strong>: array of <a href="Noso.Pso.TMNsLock.html">TMNsLock</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Pso.html#PSOFileHash">PSOFileHash</a></strong>: String = '';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Pso.html#PSOFileLock">PSOFileLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Pso.html#PSOHeader">PSOHeader</a></strong>: <a href="Noso.Pso.TPSOHeader.html">TPSOHeader</a>;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Pso.html#PSOHeadersLock">PSOHeadersLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Pso.html#PSOsArray">PSOsArray</a></strong>: array of <a href="Noso.Pso.TPSOData.html">TPSOData</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Pso.html#PSOsArrayLock">PSOsArrayLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -378,28 +378,7 @@ File access</p>
 <h3 class="detail">Variables</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CS_LockedMNs"></span><code><strong>CS_LockedMNs</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CS_PSOFile"></span><code><strong>CS_PSOFile</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CS_PSOHeaders"></span><code><strong>CS_PSOHeaders</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CS_PSOsArray"></span><code><strong>CS_PSOsArray</strong>: TRTLCriticalSection;</code></td>
+<td class="itemcode"><span id="LockedMNsLock"></span><code><strong>LockedMNsLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -420,6 +399,13 @@ File access</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="PSOFileLock"></span><code><strong>PSOFileLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="PSOHeader"></span><code><strong>PSOHeader</strong>: <a href="Noso.Pso.TPSOHeader.html">TPSOHeader</a>;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -427,7 +413,21 @@ File access</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="PSOHeadersLock"></span><code><strong>PSOHeadersLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="PSOsArray"></span><code><strong>PSOsArray</strong>: array of <a href="Noso.Pso.TPSOData.html">TPSOData</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PSOsArrayLock"></span><code><strong>PSOsArrayLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>

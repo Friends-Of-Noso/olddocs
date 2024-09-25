@@ -19,7 +19,7 @@
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p class="nodescription">This item has no description.</p><span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
-<ul class="useslist"><li>Buttons</li><li>Classes</li><li>Clipbrd</li><li>ComCtrls</li><li>Controls</li><li>DefaultTranslator</li><li>Dialogs</li><li><a href="ExploreForm.html">ExploreForm</a></li><li>ExtCtrls</li><li>fileutil</li><li>Forms</li><li>fpJSON</li><li>Graphics</li><li>Grids</li><li>IdComponent</li><li>IdContext</li><li>IdCustomHTTPServer</li><li>IdGlobal</li><li>IdHTTP</li><li>IdHTTPServer</li><li>IdTCPClient</li><li>IdTCPServer</li><li>lclintf</li><li>LCLTranslator</li><li>LCLType</li><li>Menus</li><li><a href="Noso.Block.html">Noso.Block</a></li><li><a href="Noso.Config.html">Noso.Config</a></li><li><a href="Noso.Consensus.html">Noso.Consensus</a></li><li><a href="Noso.Crypto.html">Noso.Crypto</a></li><li><a href="Noso.Debug.html">Noso.Debug</a></li><li><a href="Noso.General.html">Noso.General</a></li><li><a href="Noso.Gvt.html">Noso.Gvt</a></li><li><a href="Noso.Headers.html">Noso.Headers</a></li><li><a href="Noso.IP.Control.html">Noso.IP.Control</a></li><li><a href="Noso.Masternodes.html">Noso.Masternodes</a></li><li><a href="Noso.Network.html">Noso.Network</a></li><li><a href="Noso.Pso.html">Noso.Pso</a></li><li><a href="Noso.Summary.html">Noso.Summary</a></li><li><a href="Noso.WallCon.html">Noso.WallCon</a></li><li>StdCtrls</li><li>strutils</li><li>SysUtils</li><li><a href="translation.html">translation</a></li><li>Types</li></ul><h2 class="overview">Overview</h2>
+<ul class="useslist"><li>Buttons</li><li>Classes</li><li>Clipbrd</li><li>ComCtrls</li><li>Controls</li><li>DefaultTranslator</li><li>Dialogs</li><li><a href="ExploreForm.html">ExploreForm</a></li><li>ExtCtrls</li><li>fileutil</li><li>Forms</li><li>fpJSON</li><li>Graphics</li><li>Grids</li><li>IdComponent</li><li>IdContext</li><li>IdCustomHTTPServer</li><li>IdGlobal</li><li>IdHTTP</li><li>IdHTTPServer</li><li>IdTCPClient</li><li>IdTCPServer</li><li>lclintf</li><li>LCLTranslator</li><li>LCLType</li><li>Menus</li><li><a href="Noso.Block.html">Noso.Block</a></li><li><a href="Noso.Config.html">Noso.Config</a></li><li><a href="Noso.Consensus.html">Noso.Consensus</a></li><li><a href="Noso.Crypto.html">Noso.Crypto</a></li><li><a href="Noso.Debug.html">Noso.Debug</a></li><li><a href="Noso.General.html">Noso.General</a></li><li><a href="Noso.Gvt.html">Noso.Gvt</a></li><li><a href="Noso.Headers.html">Noso.Headers</a></li><li><a href="Noso.IP.Control.html">Noso.IP.Control</a></li><li><a href="Noso.Masternodes.html">Noso.Masternodes</a></li><li><a href="Noso.Network.html">Noso.Network</a></li><li><a href="Noso.Pso.html">Noso.Pso</a></li><li><a href="Noso.Summary.html">Noso.Summary</a></li><li><a href="Noso.WallCon.html">Noso.WallCon</a></li><li>StdCtrls</li><li>StrUtils</li><li>SysUtils</li><li><a href="translation.html">translation</a></li><li>Types</li></ul><h2 class="overview">Overview</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
 <table class="classestable wide_list">
 <tr class="listheader">
@@ -251,14 +251,20 @@
 <td class="itemcode"><code><strong><a href="MPForm.html#ArrayOrderIDsProcessed">ArrayOrderIDsProcessed</a></strong>: array of String;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#BuildingBlock">BuildingBlock</a></strong>: Integer = 0;</code></td>
+<td class="itemcode"><code><strong><a href="MPForm.html#BlocksAccessLock">BlocksAccessLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="MPForm.html#BuildNMSBlock">BuildNMSBlock</a></strong>: Int64 = 0;</code></td>
+<td class="itemcode"><code><strong><a href="MPForm.html#BuildingBlock">BuildingBlock</a></strong>: Integer = 0;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="MPForm.html#BuildNMSBlock">BuildNMSBlock</a></strong>: Int64 = 0;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#ClosedAppFilename">ClosedAppFilename</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'LOGS' +
     DirectorySeparator + 'proclo.dat';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="MPForm.html#ClosingAppLock">ClosingAppLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#ConnectedRotor">ConnectedRotor</a></strong>: Integer = 0;</code></td>
@@ -268,28 +274,10 @@
   'LOGS' + DirectorySeparator + 'console.txt';</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="MPForm.html#CriptoThreadLock">CriptoThreadLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#CryptoThread">CryptoThread</a></strong>: <a href="MPForm.TCryptoThread.html">TCryptoThread</a>;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSBlocksAccess">CSBlocksAccess</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSClosingApp">CSClosingApp</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSCriptoThread">CSCriptoThread</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSIdsProcessed">CSIdsProcessed</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSNosoCFGStr">CSNosoCFGStr</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSOutgoingMsjs">CSOutgoingMsjs</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#CSProcessLines">CSProcessLines</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#DeepDebLogFilename">DeepDebLogFilename</a></strong>: String = 'NOSODATA' + DirectorySeparator +
@@ -347,79 +335,91 @@
 <td class="itemcode"><code><strong><a href="MPForm.html#G_TotalPings">G_TotalPings</a></strong>: Int64 = 0;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="MPForm.html#IdsProcessedLock">IdsProcessedLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#IndexerThread">IndexerThread</a></strong>: <a href="MPForm.TThreadIndexer.html">TThreadIndexer</a>;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#InfoPanelTime">InfoPanelTime</a></strong>: Integer = 0;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#KeepConnectThread">KeepConnectThread</a></strong>: <a href="MPForm.TThreadKeepConnect.html">TThreadKeepConnect</a>;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#KeepServerOn">KeepServerOn</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#LastCommand">LastCommand</a></strong>: String = '';</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#LastLogLine">LastLogLine</a></strong>: String = '';</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#LastTimeReportMyMN">LastTimeReportMyMN</a></strong>: Int64 = 0;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#LastTryServerOn">LastTryServerOn</a></strong>: Int64 = 0;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#Last_SyncWithMainnet">Last_SyncWithMainnet</a></strong>: Int64 = 0;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#LogsDirectory">LogsDirectory</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'LOGS' + DirectorySeparator;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#MarksDirectory">MarksDirectory</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'SUMMARKS' +
     DirectorySeparator;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#MaxOutgoingConnections">MaxOutgoingConnections</a></strong>: Integer = 3;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#MaxPeersAllow">MaxPeersAllow</a></strong>: Integer = 50;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#MNsArray">MNsArray</a></strong>: array of <a href="MPForm.TMasterNode.html">TMasterNode</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#MNsRandomWait">MNsRandomWait</a></strong>: Integer = 0;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#MN_AutoIP">MN_AutoIP</a></strong>: Boolean = False;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#MontoIncoming">MontoIncoming</a></strong>: Int64 = 0;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#MontoOutgoing">MontoOutgoing</a></strong>: Int64 = 0;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#MyConStatus">MyConStatus</a></strong>: Integer = 0;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#MyCurrentBalance">MyCurrentBalance</a></strong>: Int64 = 0;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#NodeFTPLogFilename">NodeFTPLogFilename</a></strong>: String = 'NOSODATA' + DirectorySeparator +
   'LOGS' + DirectorySeparator + 'nodeftp.txt';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="MPForm.html#NosoCFGStrLock">NosoCFGStrLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#OutgoingMsjs">OutgoingMsjs</a></strong>: TStringList;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="MPForm.html#OutgoingMsjsLock">OutgoingMsjsLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#PerformanceFIlename">PerformanceFIlename</a></strong>: String = 'NOSODATA' + DirectorySeparator +
   'LOGS' + DirectorySeparator + 'performance.txt';</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#ProcessLines">ProcessLines</a></strong>: TStringList;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="MPForm.html#ProcessLinesLock">ProcessLinesLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="MPForm.html#RebuildingSumary">RebuildingSumary</a></strong>: Boolean = False;</code></td>
@@ -435,8 +435,8 @@
 <td class="itemcode"><code><strong><a href="MPForm.html#RPCAuto">RPCAuto</a></strong>: Boolean = False;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#RPCBakDirectory">RPCBakDirectory</a></strong>: String = 'NOSODATA' + DirectorySeparator +
-  'SUMMARKS' + DirectorySeparator + 'RPC' + DirectorySeparator;</code></td>
+<td class="itemcode"><code><strong><a href="MPForm.html#RPCBakDirectory">RPCBakDirectory</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'SUMMARKS' +
+    DirectorySeparator + 'RPC' + DirectorySeparator;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#RPCBanned">RPCBanned</a></strong>: String = '';</code></td>
@@ -478,8 +478,8 @@
 <td class="itemcode"><code><strong><a href="MPForm.html#UpdateLogsThread">UpdateLogsThread</a></strong>: <a href="MPForm.TUpdateLogs.html">TUpdateLogs</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="MPForm.html#UpdatesDirectory">UpdatesDirectory</a></strong>: String = 'NOSODATA' + DirectorySeparator +
-  'UPDATES' + DirectorySeparator;</code></td>
+<td class="itemcode"><code><strong><a href="MPForm.html#UpdatesDirectory">UpdatesDirectory</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'UPDATES' +
+    DirectorySeparator;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="MPForm.html#U_DataPanel">U_DataPanel</a></strong>: Boolean = True;</code></td>
@@ -960,6 +960,13 @@ ListadoBots : array of BotData; ListaNodos : array of NodeData; <a class="normal
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="BlocksAccessLock"></span><code><strong>BlocksAccessLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="BuildingBlock"></span><code><strong>BuildingBlock</strong>: Integer = 0;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -986,6 +993,13 @@ ListadoBots : array of BotData; ListaNodos : array of NodeData; <a class="normal
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="ClosingAppLock"></span><code><strong>ClosingAppLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="ConnectedRotor"></span><code><strong>ConnectedRotor</strong>: Integer = 0;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1003,67 +1017,19 @@ GUI/APP related</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="CriptoThreadLock"></span><code><strong>CriptoThreadLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="Noso.Network.html#PendingTransactionsLock">PendingTransactionsLock</a> : TRTLCriticalSection;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="CryptoThread"></span><code><strong>CryptoThread</strong>: <a href="MPForm.TCryptoThread.html">TCryptoThread</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSBlocksAccess"></span><code><strong>CSBlocksAccess</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSClosingApp"></span><code><strong>CSClosingApp</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSCriptoThread"></span><code><strong>CSCriptoThread</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-<a class="normal" href="Noso.Network.html#CSPendingTransactions">CSPendingTransactions</a> : TRTLCriticalSection;</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSIdsProcessed"></span><code><strong>CSIdsProcessed</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-MNs system CSMNsArray : TRTLCriticalSection; <a class="normal" href="Noso.Masternodes.html#CSWaitingMNs">CSWaitingMNs</a> : TRTLCriticalSection; <a class="normal" href="Noso.Masternodes.html#CSMNsChecks">CSMNsChecks</a> : TRTLCriticalSection;</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSNosoCFGStr"></span><code><strong>CSNosoCFGStr</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-<a class="normal" href="Noso.Network.html#CSClientReadThreads">CSClientReadThreads</a> : TRTLCriticalSection; <a class="normal" href="Noso.Gvt.html#GVTArrayLock">GVTArrayLock</a> : TRTLCriticalSection;</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSOutgoingMsjs"></span><code><strong>CSOutgoingMsjs</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSProcessLines"></span><code><strong>CSProcessLines</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Critical Sections</p>
-</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -1194,6 +1160,15 @@ FormState</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="IdsProcessedLock"></span><code><strong>IdsProcessedLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+MNs system CSMNsArray : TRTLCriticalSection; <a class="normal" href="Noso.Masternodes.html#WaitingMNsLock">WaitingMNsLock</a> : TRTLCriticalSection; <a class="normal" href="Noso.Masternodes.html#MNsChecksLock">MNsChecksLock</a> : TRTLCriticalSection;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="IndexerThread"></span><code><strong>IndexerThread</strong>: <a href="MPForm.TThreadIndexer.html">TThreadIndexer</a>;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1271,7 +1246,7 @@ Masternodes <a class="normal" href="Noso.Network.html#MasternodeVerificationCoun
 </tr>
 <tr><td colspan="1">
 <p>
-Outgoing lines, needs to be initialized <a class="normal" href="Noso.Network.html#CSOutgoingMessages">CSOutgoingMessages</a> : array[1..MaxConnections] of TRTLCriticalSection; <a class="normal" href="Noso.Network.html#OutgoingMessages">OutgoingMessages</a> : array[1..MaxConnections] of array of string; <a class="normal" href="Noso.Network.html#CSIncomingMessages">CSIncomingMessages</a> : array[1..MaxConnections] of TRTLCriticalSection; Filename variables</p>
+Outgoing lines, needs to be initialized <a class="normal" href="Noso.Network.html#OutgoingMessagesLock">OutgoingMessagesLock</a> : array[1..MaxConnections] of TRTLCriticalSection; <a class="normal" href="Noso.Network.html#OutgoingMessages">OutgoingMessages</a> : array[1..MaxConnections] of array of string; <a class="normal" href="Noso.Network.html#IncomingMessagesLock">IncomingMessagesLock</a> : array[1..MaxConnections] of TRTLCriticalSection; Filename variables</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -1355,7 +1330,23 @@ MN_IP : string = 'localhost'; MN_Port : string = '8080'; MN_Funds : string = '';
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="NosoCFGStrLock"></span><code><strong>NosoCFGStrLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="Noso.Network.html#ClientReadThreadsLock">ClientReadThreadsLock</a> : TRTLCriticalSection; <a class="normal" href="Noso.Gvt.html#GVTArrayLock">GVTArrayLock</a> : TRTLCriticalSection;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="OutgoingMsjs"></span><code><strong>OutgoingMsjs</strong>: TStringList;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OutgoingMsjsLock"></span><code><strong>OutgoingMsjsLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -1374,6 +1365,15 @@ MN_IP : string = 'localhost'; MN_Port : string = '8080'; MN_Funds : string = '';
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ProcessLinesLock"></span><code><strong>ProcessLinesLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Critical Sections</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -1408,8 +1408,8 @@ MN_IP : string = 'localhost'; MN_Port : string = '8080'; MN_Funds : string = '';
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RPCBakDirectory"></span><code><strong>RPCBakDirectory</strong>: String = 'NOSODATA' + DirectorySeparator +
-  'SUMMARKS' + DirectorySeparator + 'RPC' + DirectorySeparator;</code></td>
+<td class="itemcode"><span id="RPCBakDirectory"></span><code><strong>RPCBakDirectory</strong>: String = 'NOSODATA' + DirectorySeparator + 'SUMMARKS' +
+    DirectorySeparator + 'RPC' + DirectorySeparator;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -1511,8 +1511,8 @@ MN_IP : string = 'localhost'; MN_Port : string = '8080'; MN_Funds : string = '';
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="UpdatesDirectory"></span><code><strong>UpdatesDirectory</strong>: String = 'NOSODATA' + DirectorySeparator +
-  'UPDATES' + DirectorySeparator;</code></td>
+<td class="itemcode"><span id="UpdatesDirectory"></span><code><strong>UpdatesDirectory</strong>: String = 'NOSODATA' + DirectorySeparator + 'UPDATES' +
+    DirectorySeparator;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>

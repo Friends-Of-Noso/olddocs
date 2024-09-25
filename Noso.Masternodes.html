@@ -184,36 +184,6 @@
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#ArrWaitMNs">ArrWaitMNs</a></strong>: array of String;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSMNsChecks">CSMNsChecks</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSMNsFile">CSMNsFile</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSMNsIPProc">CSMNsIPProc</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSMNsList">CSMNsList</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSMN_FileText">CSMN_FileText</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSReceivedMNs">CSReceivedMNs</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSVerifyThread">CSVerifyThread</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSVerNodes">CSVerNodes</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CSWaitingMNs">CSWaitingMNs</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CS_MNsHash">CS_MNsHash</a></strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#CurrSynctus">CurrSynctus</a></strong>: String;</code></td>
 </tr>
 <tr class="list2">
@@ -244,13 +214,31 @@
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNFileHandler">MNFileHandler</a></strong>: textfile;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsChecksLock">MNsChecksLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsFileLock">MNsFileLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsHashLock">MNsHashLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsIPProcLock">MNsIPProcLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsList">MNsList</a></strong>: array of <a href="Noso.Masternodes.TMNode.html">TMnode</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsListCopy">MNsListCopy</a></strong>: array of <a href="Noso.Masternodes.TMNode.html">TMnode</a>;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MNsListLock">MNsListLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MN_FileText">MN_FileText</a></strong>: String = '';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MN_FileTextLock">MN_FileTextLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#MyMNsHash">MyMNsHash</a></strong>: String = '';</code></td>
@@ -259,10 +247,22 @@
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#OpenVerificators">OpenVerificators</a></strong>: Integer;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#UnconfirmedIPs">UnconfirmedIPs</a></strong>: Integer;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#ReceivedMNsLock">ReceivedMNsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#UnconfirmedIPs">UnconfirmedIPs</a></strong>: Integer;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="Noso.Masternodes.html#VerifiedNodes">VerifiedNodes</a></strong>: String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#VerifiedNodesLock">VerifiedNodesLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#VerifyThreadLock">VerifyThreadLock</a></strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="Noso.Masternodes.html#WaitingMNsLock">WaitingMNsLock</a></strong>: TRTLCriticalSection;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -609,76 +609,6 @@ Fills the given array with the <a class="normal" href="MP.Protocol.html#Nodes">n
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CSMNsChecks"></span><code><strong>CSMNsChecks</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSMNsFile"></span><code><strong>CSMNsFile</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSMNsIPProc"></span><code><strong>CSMNsIPProc</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSMNsList"></span><code><strong>CSMNsList</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSMN_FileText"></span><code><strong>CSMN_FileText</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSReceivedMNs"></span><code><strong>CSReceivedMNs</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSVerifyThread"></span><code><strong>CSVerifyThread</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSVerNodes"></span><code><strong>CSVerNodes</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CSWaitingMNs"></span><code><strong>CSWaitingMNs</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CS_MNsHash"></span><code><strong>CS_MNsHash</strong>: TRTLCriticalSection;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
 <td class="itemcode"><span id="CurrSynctus"></span><code><strong>CurrSynctus</strong>: String;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -749,6 +679,34 @@ Fills the given array with the <a class="normal" href="MP.Protocol.html#Nodes">n
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="MNsChecksLock"></span><code><strong>MNsChecksLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MNsFileLock"></span><code><strong>MNsFileLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MNsHashLock"></span><code><strong>MNsHashLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MNsIPProcLock"></span><code><strong>MNsIPProcLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="MNsList"></span><code><strong>MNsList</strong>: array of <a href="Noso.Masternodes.TMNode.html">TMnode</a>;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -763,7 +721,21 @@ Fills the given array with the <a class="normal" href="MP.Protocol.html#Nodes">n
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="MNsListLock"></span><code><strong>MNsListLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="MN_FileText"></span><code><strong>MN_FileText</strong>: String = '';</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MN_FileTextLock"></span><code><strong>MN_FileTextLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -784,6 +756,13 @@ Fills the given array with the <a class="normal" href="MP.Protocol.html#Nodes">n
 </table>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="ReceivedMNsLock"></span><code><strong>ReceivedMNsLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="UnconfirmedIPs"></span><code><strong>UnconfirmedIPs</strong>: Integer;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -792,6 +771,27 @@ Fills the given array with the <a class="normal" href="MP.Protocol.html#Nodes">n
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="VerifiedNodes"></span><code><strong>VerifiedNodes</strong>: String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="VerifiedNodesLock"></span><code><strong>VerifiedNodesLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="VerifyThreadLock"></span><code><strong>VerifyThreadLock</strong>: TRTLCriticalSection;</code></td>
+</tr>
+<tr><td colspan="1">
+<p class="nodescription">This item has no description.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="WaitingMNsLock"></span><code><strong>WaitingMNsLock</strong>: TRTLCriticalSection;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
