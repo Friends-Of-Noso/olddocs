@@ -24,7 +24,9 @@
 <p class="declaration">
 <code>type TOrderGroup = packed record</code></p>
 <h2 class="description">Description</h2>
-<p class="nodescription">This item has no description.</p><h2 class="overview">Overview</h2>
+<p>
+Manages the details of an order within the system.</p>
+<h2 class="overview">Overview</h2>
 <span id="PasDoc-Fields"></span><h3 class="summary">Fields</h3>
 <table class="summary wide_list">
 <tr class="list">
@@ -33,7 +35,7 @@
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Summary.TOrderGroup.html#AmmountTrf">AmmountTrf</a></strong>: Int64;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Summary.TOrderGroup.html#AmountTransferred">AmountTransferred</a></strong>: Int64;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -45,7 +47,7 @@
 </tr>
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><strong><a href="Noso.Summary.TOrderGroup.html#OrderLines">OrderLines</a></strong>: Integer;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Summary.TOrderGroup.html#OrderLineCount">OrderLineCount</a></strong>: Integer;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
@@ -76,15 +78,19 @@
 <td class="itemcode"><span id="AmmountFee"></span><code><strong>AmmountFee</strong>: Int64;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Fee associated with the order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="AmmountTrf"></span><code><strong>AmmountTrf</strong>: Int64;</code></td>
+<td class="itemcode"><span id="AmountTransferred"></span><code><strong>AmountTransferred</strong>: Int64;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Amount transferred in the order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -92,7 +98,9 @@
 <td class="itemcode"><span id="Block"></span><code><strong>Block</strong>: Integer;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+<code>Block</code> number associated with the order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -100,15 +108,19 @@
 <td class="itemcode"><span id="OrderID"></span><code><strong>OrderID</strong>: String[64];</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Unique identifier for the order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="OrderLines"></span><code><strong>OrderLines</strong>: Integer;</code></td>
+<td class="itemcode"><span id="OrderLineCount"></span><code><strong>OrderLineCount</strong>: Integer;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Number of lines in the order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -116,7 +128,9 @@
 <td class="itemcode"><span id="OrderType"></span><code><strong>OrderType</strong>: String[6];</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Type of order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -124,7 +138,9 @@
 <td class="itemcode"><span id="Receiver"></span><code><strong>Receiver</strong>: String[40];</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Address of the <code>receiver</code></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -132,7 +148,9 @@
 <td class="itemcode"><span id="Reference"></span><code><strong>Reference</strong>: String[64];</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+<code>Reference</code> for the order</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -140,7 +158,9 @@
 <td class="itemcode"><span id="Sender"></span><code><strong>Sender</strong>: String;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Address of the <code>sender</code></p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -148,7 +168,9 @@
 <td class="itemcode"><span id="TimeStamp"></span><code><strong>TimeStamp</strong>: Int64;</code></td>
 </tr>
 <tr><td colspan="2">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+<code>Timestamp</code> of the order</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>
 </span>

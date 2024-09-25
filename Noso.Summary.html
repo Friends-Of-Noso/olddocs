@@ -27,34 +27,40 @@
 <th class="itemdesc">Description</th>
 </tr>
 <tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Summary.TBlockRecords.html"><code>TBlockRecords</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemname">Record&nbsp;<a class="bold" href="Noso.Summary.TBlockRecord.html"><code>TBlockRecord</code></a></td>
+<td class="itemdesc">Holds information about a block, including its disk position and associated summary data.</td>
 </tr>
 <tr class="list2">
 <td class="itemname">Packed Record&nbsp;<a class="bold" href="Noso.Summary.TOrderGroup.html"><code>TOrderGroup</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemdesc">Manages the details of an order within the system.</td>
 </tr>
 <tr class="list">
 <td class="itemname">Packed Record&nbsp;<a class="bold" href="Noso.Summary.TSummaryData.html"><code>TSummaryData</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemdesc">Holds the data for each address' summary</td>
 </tr>
 </table>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
 <table class="summary wide_list">
 <tr class="list">
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#ComputeSummaryHash">ComputeSummaryHash</a></strong>: String;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#CreateNewSummaryFile-Boolean-">CreateNewSummaryFile</a></strong>(AddBlockZero: Boolean);</code></td>
 </tr>
-<tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#CreateProtocolOrder-Integer-String-String-String-String-Int64-Int64-">CreateProtocolOrder</a></strong>(BlockN: Integer; OrType, Sender, receiver, signature: String; TimeStamp, Amount: Int64): <a href="Noso.General.TOrderData.html">TOrderData</a>;</code></td>
-</tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#CreateSumaryBackup">CreateSumaryBackup</a></strong>(): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#CreateProtocolOrder-Integer-String-String-String-String-Int64-Int64-">CreateProtocolOrder</a></strong>(BlockNumber: Integer; OrderType, Sender, Receiver, Signature: String; TimeStamp, Amount: Int64): <a href="Noso.General.TOrderData.html">TOrderData</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#CreateSumaryIndex">CreateSumaryIndex</a></strong>(): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#CreateSummaryBackup">CreateSummaryBackup</a></strong>(): Boolean;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#CreditTo-String-Int64-Int64-">CreditTo</a></strong>(Address: String; amount, blocknumber: Int64);</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#CreateSummaryIndex">CreateSummaryIndex</a></strong>(): Int64;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#CreditTo-String-Int64-Int64-">CreditTo</a></strong>(Address: String; Amount, BlockNumber: Int64);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#FindSummaryIndexPosition-String-TSummaryData-Boolean-">FindSummaryIndexPosition</a></strong>(Text: String; out RecordData: <a href="Noso.Summary.TSummaryData.html">TSummaryData</a>; IsAlias: Boolean = False): Int64;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetAddressAlias-String-">GetAddressAlias</a></strong>(Address: String): String;</code></td>
@@ -63,49 +69,43 @@
 <td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetAddressBalanceIndexed-String-">GetAddressBalanceIndexed</a></strong>(Address: String): Int64;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetAddressLastOP-String-">GetAddressLastOP</a></strong>(Address: String): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetAddressLastOperation-String-">GetAddressLastOperation</a></strong>(Address: String): Int64;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetIndexPosition-String-TSummaryData-Boolean-">GetIndexPosition</a></strong>(LText: String; out RecordData: <a href="Noso.Summary.TSummaryData.html">TSummaryData</a>; IsAlias: Boolean = False): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetSummaryAsMemoryStream-TMemoryStream-">GetSummaryAsMemoryStream</a></strong>(out Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetSummaryAsMemStream-TMemoryStream-">GetSummaryAsMemStream</a></strong>(out LMs: TMemoryStream): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetZipSummaryAsMemoryStream-TMemoryStream-">GetZipSummaryAsMemoryStream</a></strong>(out Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#GetZIPSummaryAsMemStream-TMemoryStream-">GetZIPSummaryAsMemStream</a></strong>(out LMs: TMemoryStream): Int64;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#IsCustomizationValid-String-String-Int64-Boolean-">IsCustomizationValid</a></strong>(Address, Custom: String; BlockNumber: Int64; ForceCustom: Boolean = False): Boolean;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#IsCustomizacionValid-String-String-Int64-Boolean-">IsCustomizacionValid</a></strong>(address, custom: String; blocknumber: Int64; forceCustom: Boolean = False): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#IsSummaryValidPayment-String-Int64-Int64-">IsSummaryValidPayment</a></strong>(Address: String; Amount, BlockNumber: Int64): Boolean;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#MySumarioHash">MySumarioHash</a></strong>: String;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#ProcessSummaryPayment-String-Int64-Int64-">ProcessSummaryPayment</a></strong>(Address: String; Amount, BlockNumber: Int64);</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#ResetBlockRecords">ResetBlockRecords</a></strong>();</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#RestoreSumaryBackup">RestoreSumaryBackup</a></strong>(): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#RestoreSummaryBackup">RestoreSummaryBackup</a></strong>(): Boolean;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#SaveSummaryToFile-TMemoryStream-">SaveSummaryToFile</a></strong>(const LStream: TMemoryStream): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#SaveSummaryToFile-TMemoryStream-">SaveSummaryToFile</a></strong>(Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#SetSummaryHash">SetSummaryHash</a></strong>();</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#SumIndexLength">SumIndexLength</a></strong>(): Int64;</code></td>
-</tr>
-<tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#SummaryPay-String-Int64-Int64-">SummaryPay</a></strong>(Address: String; amount, blocknumber: Int64);</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#SummaryValidPay-String-Int64-Int64-">SummaryValidPay</a></strong>(Address: String; amount, blocknumber: Int64): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#SummaryIndexLength">SummaryIndexLength</a></strong>(): Int64;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code>procedure <strong><a href="Noso.Summary.html#UpdateSummaryChanges">UpdateSummaryChanges</a></strong>();</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#ZipSumary">ZipSumary</a></strong>(): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="Noso.Summary.html#ZipSummary">ZipSummary</a></strong>(): Boolean;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
@@ -123,59 +123,126 @@
 <td class="itemcode"><code><strong><a href="Noso.Summary.html#SummaryHashValue">SummaryHashValue</a></strong>: String = '';</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Summary.html#SummaryLastop">SummaryLastop</a></strong>: Int64;</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Summary.html#SummaryLastOperation">SummaryLastOperation</a></strong>: Int64;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="Noso.Summary.html#WorkingPath">WorkingPath</a></strong>: String = '';</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Summary.html#WorkingDirectory">WorkingDirectory</a></strong>: String = '';</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="Noso.Summary.html#ZipSumaryFileName">ZipSumaryFileName</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'sumary.zip';</code></td>
+<td class="itemcode"><code><strong><a href="Noso.Summary.html#ZipSummaryFileName">ZipSummaryFileName</a></strong>: String = 'NOSODATA' + DirectorySeparator + 'sumary.zip';</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail wide_list">
 <tr class="list">
+<td class="itemcode"><span id="ComputeSummaryHash"></span><code>function <strong>ComputeSummaryHash</strong>: String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retrieves the current hash value of the summary file. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">The hash value as a string.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
 <td class="itemcode"><span id="CreateNewSummaryFile-Boolean-"></span><code>procedure <strong>CreateNewSummaryFile</strong>(AddBlockZero: Boolean);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Sumary management Creates a new summary file</p>
+Initializes a new summary file on disk. </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>AddBlockZero</dt>
+<dd>If <code>True</code>, a zero block is added to the summary file and updates the summary.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CreateProtocolOrder-Integer-String-String-String-String-Int64-Int64-"></span><code>function <strong>CreateProtocolOrder</strong>(BlockN: Integer; OrType, Sender, receiver, signature: String; TimeStamp, Amount: Int64): <a href="Noso.General.TOrderData.html">TOrderData</a>;</code></td>
+<td class="itemcode"><span id="CreateProtocolOrder-Integer-String-String-String-String-Int64-Int64-"></span><code>function <strong>CreateProtocolOrder</strong>(BlockNumber: Integer; OrderType, Sender, Receiver, Signature: String; TimeStamp, Amount: Int64): <a href="Noso.General.TOrderData.html">TOrderData</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Protocol utilitys</p>
-</td></tr>
+Initializes a new order with the specified parameters.
+
+<p>       </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>BlockNumber</dt>
+<dd>The block number where the order is recorded.</dd>
+<dt>OrderType</dt>
+<dd>Type of order.</dd>
+<dt>Sender</dt>
+<dd>The address of the sender.</dd>
+<dt>Receiver</dt>
+<dd>The address of the receiver.</dd>
+<dt>Signature</dt>
+<dd>Digital signature of the order.</dd>
+<dt>TimeStamp</dt>
+<dd>Timestamp of when the order is created.</dd>
+<dt>Amount</dt>
+<dd>Amount related to the order.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">A <a class="normal" href="Noso.General.TOrderData.html">TOrderData</a> structure containing the initialized order information.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CreateSumaryBackup"></span><code>function <strong>CreateSumaryBackup</strong>(): Boolean;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="CreateSumaryIndex"></span><code>function <strong>CreateSumaryIndex</strong>(): Int64;</code></td>
+<td class="itemcode"><span id="CreateSummaryBackup"></span><code>function <strong>CreateSummaryBackup</strong>(): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Creates the summary index from the disk</p>
+Creates a backup of the current summary file. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the backup operation is successful, otherwise <code>False</code>.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateSummaryIndex"></span><code>function <strong>CreateSummaryIndex</strong>(): Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creates the summary index from the disk summary file. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">The time taken to create the summary index in milliseconds.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreditTo-String-Int64-Int64-"></span><code>procedure <strong>CreditTo</strong>(Address: String; Amount, BlockNumber: Int64);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Credits a specified amount to a specific address, updating its balance.   </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address to which the amount will be credited.</dd>
+<dt>Amount</dt>
+<dd>The amount to be credited.</dd>
+<dt>BlockNumber</dt>
+<dd>The block number in which the credit is applied.</dd>
+</dl>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="CreditTo-String-Int64-Int64-"></span><code>procedure <strong>CreditTo</strong>(Address: String; amount, blocknumber: Int64);</code></td>
+<td class="itemcode"><span id="FindSummaryIndexPosition-String-TSummaryData-Boolean-"></span><code>function <strong>FindSummaryIndexPosition</strong>(Text: String; out RecordData: <a href="Noso.Summary.TSummaryData.html">TSummaryData</a>; IsAlias: Boolean = False): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Set an ammount to be credited to an specific address</p>
-</td></tr>
+Searches for a summary record in the index based on the provided text.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Text</dt>
+<dd>The text (hash or alias) to search for in the index.</dd>
+<dt>RecordData</dt>
+<dd>Output parameter that will hold the found record data.</dd>
+<dt>IsAlias</dt>
+<dd>If true, searches for a <a class="normal" href="MP.Protocol.html#Custom">custom</a> alias instead of the hash.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The index position of the found record, or -1 if not found.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -183,8 +250,16 @@ Set an ammount to be credited to an specific address</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Returns the address alias name if exists</p>
-</td></tr>
+Retrieves the <a class="normal" href="MP.Protocol.html#Custom">custom</a> alias for a specified address, if it exists.
+
+<p> </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address to look up the alias for.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The <a class="normal" href="MP.Protocol.html#Custom">custom</a> alias associated with the address, or an empty string if none exists.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -192,56 +267,125 @@ Returns the address alias name if exists</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Returns the balance of a specific address</p>
-</td></tr>
+Retrieves the balance of a specific address from the summary index.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address whose balance is to be retrieved.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The balance of the specified address, or 0 if not found.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetAddressLastOP-String-"></span><code>function <strong>GetAddressLastOP</strong>(Address: String): Int64;</code></td>
+<td class="itemcode"><span id="GetAddressLastOperation-String-"></span><code>function <strong>GetAddressLastOperation</strong>(Address: String): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Returns the address last operation block</p>
-</td></tr>
+Retrieves the last operation block number associated with a specified address.
+
+<p> 
+
+<p>Returns the address last operation block</p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address to look up.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The block number of the last operation, or 0 if not found.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetIndexPosition-String-TSummaryData-Boolean-"></span><code>function <strong>GetIndexPosition</strong>(LText: String; out RecordData: <a href="Noso.Summary.TSummaryData.html">TSummaryData</a>; IsAlias: Boolean = False): Int64;</code></td>
+<td class="itemcode"><span id="GetSummaryAsMemoryStream-TMemoryStream-"></span><code>function <strong>GetSummaryAsMemoryStream</strong>(out Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-If found, returns the record</p>
-</td></tr>
+Loads the summary file into a memory stream.
+
+<p> </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Stream</dt>
+<dd>The output memory stream that will contain the summary data.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The size of the summary data loaded into the stream.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetSummaryAsMemStream-TMemoryStream-"></span><code>function <strong>GetSummaryAsMemStream</strong>(out LMs: TMemoryStream): Int64;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="GetZIPSummaryAsMemStream-TMemoryStream-"></span><code>function <strong>GetZIPSummaryAsMemStream</strong>(out LMs: TMemoryStream): Int64;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="IsCustomizacionValid-String-String-Int64-Boolean-"></span><code>function <strong>IsCustomizacionValid</strong>(address, custom: String; blocknumber: Int64; forceCustom: Boolean = False): Boolean;</code></td>
+<td class="itemcode"><span id="GetZipSummaryAsMemoryStream-TMemoryStream-"></span><code>function <strong>GetZipSummaryAsMemoryStream</strong>(out Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Process if an address customization is valid</p>
-</td></tr>
+Loads the zipped summary file into a memory stream.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Stream</dt>
+<dd>The output memory stream that will contain the zipped summary data.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The size of the zipped summary data loaded into the stream.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="MySumarioHash"></span><code>function <strong>MySumarioHash</strong>: String;</code></td>
+<td class="itemcode"><span id="IsCustomizationValid-String-String-Int64-Boolean-"></span><code>function <strong>IsCustomizationValid</strong>(Address, Custom: String; BlockNumber: Int64; ForceCustom: Boolean = False): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Checks if an address can customize its alias based on current balance and conditions.     </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address to verify customization for.</dd>
+<dt>Custom</dt>
+<dd>The new <a class="normal" href="MP.Protocol.html#Custom">custom</a> alias to be set.</dd>
+<dt>BlockNumber</dt>
+<dd>The block number in which the customization is processed.</dd>
+<dt>ForceCustom</dt>
+<dd>If true, bypasses balance checks for customization.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the customization is valid, otherwise <code>False</code>.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IsSummaryValidPayment-String-Int64-Int64-"></span><code>function <strong>IsSummaryValidPayment</strong>(Address: String; Amount, BlockNumber: Int64): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Verifies if a sender address has enough funds for a specified payment amount.    </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address of the sender.</dd>
+<dt>Amount</dt>
+<dd>The amount to be paid.</dd>
+<dt>BlockNumber</dt>
+<dd>The block number in which the payment is being processed.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the payment is valid, otherwise <code>False</code>.</p></td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ProcessSummaryPayment-String-Int64-Int64-"></span><code>procedure <strong>ProcessSummaryPayment</strong>(Address: String; Amount, BlockNumber: Int64);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Processes a payment for a specified address, updating its balance.
+
+<p>  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Address</dt>
+<dd>The address to process the payment for.</dd>
+<dt>Amount</dt>
+<dd>The amount to be deducted from the address's balance.</dd>
+<dt>BlockNumber</dt>
+<dd>The block number in which the payment is processed.</dd>
+</dl>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -249,22 +393,33 @@ Process if an address customization is valid</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Reset the block records</p>
+Resets the block records by clearing the block records array.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RestoreSumaryBackup"></span><code>function <strong>RestoreSumaryBackup</strong>(): Boolean;</code></td>
+<td class="itemcode"><span id="RestoreSummaryBackup"></span><code>function <strong>RestoreSummaryBackup</strong>(): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Restores the summary file from a backup. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the restore operation is successful, otherwise <code>False</code>.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="SaveSummaryToFile-TMemoryStream-"></span><code>function <strong>SaveSummaryToFile</strong>(const LStream: TMemoryStream): Boolean;</code></td>
+<td class="itemcode"><span id="SaveSummaryToFile-TMemoryStream-"></span><code>function <strong>SaveSummaryToFile</strong>(Stream: TMemoryStream): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Saves the content of a memory stream to a specified file.  </p>
+<h6 class="description_section">Parameters</h6>
+<dl class="parameters">
+<dt>Stream</dt>
+<dd>The memory stream containing the data to save.</dd>
+</dl>
+<h6 class="description_section">Returns</h6>
+<p class="return">The size of the stream.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -272,33 +427,18 @@ Reset the block records</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Summary hash related</p>
+Calculates and sets the hash value for the summary file.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="SumIndexLength"></span><code>function <strong>SumIndexLength</strong>(): Int64;</code></td>
+<td class="itemcode"><span id="SummaryIndexLength"></span><code>function <strong>SummaryIndexLength</strong>(): Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Returns the summary index length</p>
-</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="SummaryPay-String-Int64-Int64-"></span><code>procedure <strong>SummaryPay</strong>(Address: String; amount, blocknumber: Int64);</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="SummaryValidPay-String-Int64-Int64-"></span><code>function <strong>SummaryValidPay</strong>(Address: String; amount, blocknumber: Int64): Boolean;</code></td>
-</tr>
-<tr><td colspan="1">
-<p>
-Verify if a sender address have enough funds</p>
-</td></tr>
+Returns the length of the summary index. </p>
+<h6 class="description_section">Returns</h6>
+<p class="return">The length of the summary index.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -306,17 +446,22 @@ Verify if a sender address have enough funds</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Process the changes of the block to the summary on disk</p>
+Processes and writes changes made to the summary in memory to the disk.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ZipSumary"></span><code>function <strong>ZipSumary</strong>(): Boolean;</code></td>
+<td class="itemcode"><span id="ZipSummary"></span><code>function <strong>ZipSummary</strong>(): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Must be replaced with new stream compression methods</p>
-</td></tr>
+Compresses the current summary file into a ZIP archive.
+
+<p>
+
+<p>Must be replaced with new stream compression methods</p>
+<h6 class="description_section">Returns</h6>
+<p class="return"><code>True</code> if the zipping operation succeeds, otherwise <code>False</code>.</p></td></tr>
 </table>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
@@ -333,7 +478,7 @@ Must be replaced with new stream compression methods</p>
 </tr>
 <tr><td colspan="1">
 <p>
-Summary related</p>
+The file name for the summary data, located in the 'NOSODATA' directory.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
@@ -341,30 +486,36 @@ Summary related</p>
 <td class="itemcode"><span id="SummaryHashValue"></span><code><strong>SummaryHashValue</strong>: String = '';</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="SummaryLastop"></span><code><strong>SummaryLastop</strong>: Int64;</code></td>
-</tr>
-<tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="WorkingPath"></span><code><strong>WorkingPath</strong>: String = '';</code></td>
-</tr>
-<tr><td colspan="1">
 <p>
-Overall variables</p>
+The MD5 hash value of the summary file for integrity checks.</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ZipSumaryFileName"></span><code><strong>ZipSumaryFileName</strong>: String = 'NOSODATA' + DirectorySeparator + 'sumary.zip';</code></td>
+<td class="itemcode"><span id="SummaryLastOperation"></span><code><strong>SummaryLastOperation</strong>: Int64;</code></td>
 </tr>
 <tr><td colspan="1">
-<p class="nodescription">This item has no description.</p></td></tr>
+<p>
+Holds the block number of the last operation performed on the summary data.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="WorkingDirectory"></span><code><strong>WorkingDirectory</strong>: String = '';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The current working directory for the application.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ZipSummaryFileName"></span><code><strong>ZipSummaryFileName</strong>: String = 'NOSODATA' + DirectorySeparator + 'sumary.zip';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+The file name for the zipped summary data, located in the 'NOSODATA' directory.</p>
+</td></tr>
 </table>
 <hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0-snapshot</a>. </em>
 </span>
