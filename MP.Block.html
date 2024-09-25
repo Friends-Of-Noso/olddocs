@@ -29,10 +29,10 @@
 <td class="itemcode"><code>procedure <strong><a href="MP.Block.html#CrearBloqueCero">CrearBloqueCero</a></strong>();</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="MP.Block.html#GetBlockMNs-Integer-">GetBlockMNs</a></strong>(BlockNumber: Integer): <a href="MPForm.html#BlockArraysPos">BlockArraysPos</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="MP.Block.html#GetBlockMNs-Integer-">GetBlockMNs</a></strong>(BlockNumber: Integer): <a href="MPForm.html#TBlockAddresses">TBlockAddresses</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <strong><a href="MP.Block.html#GetBlockPoSes-Integer-">GetBlockPoSes</a></strong>(BlockNumber: Integer): <a href="MPForm.html#BlockArraysPos">BlockArraysPos</a>;</code></td>
+<td class="itemcode"><code>function <strong><a href="MP.Block.html#GetBlockPoSes-Integer-">GetBlockPoSes</a></strong>(BlockNumber: Integer): <a href="MPForm.html#TBlockAddresses">TBlockAddresses</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code>function <strong><a href="MP.Block.html#GetBlockReward-Int64-">GetBlockReward</a></strong>(BlNumber: Int64): Int64;</code></td>
@@ -41,7 +41,7 @@
 <td class="itemcode"><code>function <strong><a href="MP.Block.html#GEtNSLBlkOrdInfo-String-">GEtNSLBlkOrdInfo</a></strong>(LineText: String): String;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="MP.Block.html#GuardarBloque-String-BlockHeaderData-arrayofTOrderData-Int64-Integer-arrayofTArrayPos-Int64-Integer-arrayofTArrayPos-">GuardarBloque</a></strong>(NombreArchivo: String; Cabezera: <a href="Noso.Block.BlockHeaderData.html">BlockHeaderData</a>; Ordenes: array of <a href="Noso.General.TOrderData.html">TOrderData</a>; PosPay: Int64; PoSnumber: Integer; PosAddresses: array of <a href="MPForm.TArrayPos.html">TArrayPos</a>; MNsPay: Int64; MNsNumber: Integer; MNsAddresses: array of <a href="MPForm.TArrayPos.html">TArrayPos</a>): Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a href="MP.Block.html#GuardarBloque-String-BlockHeaderData-arrayofTOrderData-Int64-Integer-arrayofTAddress-Int64-Integer-arrayofTAddress-">GuardarBloque</a></strong>(NombreArchivo: String; Cabezera: <a href="Noso.Block.BlockHeaderData.html">BlockHeaderData</a>; Ordenes: array of <a href="Noso.General.TOrderData.html">TOrderData</a>; PosPay: Int64; PoSnumber: Integer; PosAddresses: array of <a href="MPForm.TAddress.html">TAddress</a>; MNsPay: Int64; MNsNumber: Integer; MNsAddresses: array of <a href="MPForm.TAddress.html">TAddress</a>): Boolean;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code>function <strong><a href="MP.Block.html#RemoveBlocks-Int64-">RemoveBlocks</a></strong>(UpToBlock: Int64): Integer;</code></td>
@@ -72,14 +72,14 @@ Build the default block 0</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetBlockMNs-Integer-"></span><code>function <strong>GetBlockMNs</strong>(BlockNumber: Integer): <a href="MPForm.html#BlockArraysPos">BlockArraysPos</a>;</code></td>
+<td class="itemcode"><span id="GetBlockMNs-Integer-"></span><code>function <strong>GetBlockMNs</strong>(BlockNumber: Integer): <a href="MPForm.html#TBlockAddresses">TBlockAddresses</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetBlockPoSes-Integer-"></span><code>function <strong>GetBlockPoSes</strong>(BlockNumber: Integer): <a href="MPForm.html#BlockArraysPos">BlockArraysPos</a>;</code></td>
+<td class="itemcode"><span id="GetBlockPoSes-Integer-"></span><code>function <strong>GetBlockPoSes</strong>(BlockNumber: Integer): <a href="MPForm.html#TBlockAddresses">TBlockAddresses</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p class="nodescription">This item has no description.</p></td></tr>
@@ -102,7 +102,7 @@ Function GetDiffHashrate(bestdiff:String):integer; Function BestHashReadeable(Be
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GuardarBloque-String-BlockHeaderData-arrayofTOrderData-Int64-Integer-arrayofTArrayPos-Int64-Integer-arrayofTArrayPos-"></span><code>function <strong>GuardarBloque</strong>(NombreArchivo: String; Cabezera: <a href="Noso.Block.BlockHeaderData.html">BlockHeaderData</a>; Ordenes: array of <a href="Noso.General.TOrderData.html">TOrderData</a>; PosPay: Int64; PoSnumber: Integer; PosAddresses: array of <a href="MPForm.TArrayPos.html">TArrayPos</a>; MNsPay: Int64; MNsNumber: Integer; MNsAddresses: array of <a href="MPForm.TArrayPos.html">TArrayPos</a>): Boolean;</code></td>
+<td class="itemcode"><span id="GuardarBloque-String-BlockHeaderData-arrayofTOrderData-Int64-Integer-arrayofTAddress-Int64-Integer-arrayofTAddress-"></span><code>function <strong>GuardarBloque</strong>(NombreArchivo: String; Cabezera: <a href="Noso.Block.BlockHeaderData.html">BlockHeaderData</a>; Ordenes: array of <a href="Noso.General.TOrderData.html">TOrderData</a>; PosPay: Int64; PoSnumber: Integer; PosAddresses: array of <a href="MPForm.TAddress.html">TAddress</a>; MNsPay: Int64; MNsNumber: Integer; MNsAddresses: array of <a href="MPForm.TAddress.html">TAddress</a>): Boolean;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>

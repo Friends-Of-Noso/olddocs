@@ -1232,7 +1232,7 @@
 <td class="itemunit"><a class="bold" href="MP.Red.html">MP.Red</a></td>
 <td class="itemdesc"><p>function GetTotalConexiones():integer; function GetTotalVerifiedConnections():Integer;
 
-<p>function GetTotalVerifiedConnections():Integer; var counter:integer; Begin result := 0; for counter := 1 to <a class="normal" href="MPForm.html#MaxConnections">MaxConnections</a> do if <a class="normal" href="Noso.Network.html#Connections">Connections</a>[Counter].IsAuthenticated then result := result + 1; End;</p></td>
+<p>function GetTotalVerifiedConnections():Integer; var counter:integer; Begin result := 0; for counter := 1 to <a class="normal" href="Noso.Network.html#MaxConnections">MaxConnections</a> do if <a class="normal" href="Noso.Network.html#Connections">Connections</a>[Counter].IsAuthenticated then result := result + 1; End;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Crypto.html#GetTransferHash-String-">GetTransferHash</a></td>
@@ -1280,7 +1280,7 @@
 <td class="itemdesc"><p>Loads the zipped summary file into a memory stream.</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="MP.Block.html#GuardarBloque-String-BlockHeaderData-arrayofTOrderData-Int64-Integer-arrayofTArrayPos-Int64-Integer-arrayofTArrayPos-">GuardarBloque</a></td>
+<td class="itemname"><a class="bold" href="MP.Block.html#GuardarBloque-String-BlockHeaderData-arrayofTOrderData-Int64-Integer-arrayofTAddress-Int64-Integer-arrayofTAddress-">GuardarBloque</a></td>
 <td class="itemunit"><a class="bold" href="MP.Block.html">MP.Block</a></td>
 <td class="itemdesc"><p>Guarda el archivo de bloque en disco</p></td>
 </tr>
@@ -1628,12 +1628,12 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="MP.Parser.html#OutgoingMsjsAdd-String-">OutgoingMsjsAdd</a></td>
 <td class="itemunit"><a class="bold" href="MP.Parser.html">MP.Parser</a></td>
-<td class="itemdesc"><p>Adds a line to <a class="normal" href="MPForm.html#OutgoingMsjs">OutgoingMsjs</a> thread safe</p></td>
+<td class="itemdesc"><p>Adds a line to <a class="normal" href="MPForm.html#OutgoingMessagesMP">OutgoingMessagesMP</a> thread safe</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="MP.Parser.html#OutgoingMsjsGet">OutgoingMsjsGet</a></td>
 <td class="itemunit"><a class="bold" href="MP.Parser.html">MP.Parser</a></td>
-<td class="itemdesc"><p>Gets a line from <a class="normal" href="MPForm.html#OutgoingMsjs">OutgoingMsjs</a> thread safe</p></td>
+<td class="itemdesc"><p>Gets a line from <a class="normal" href="MPForm.html#OutgoingMessagesMP">OutgoingMessagesMP</a> thread safe</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="MP.Gui.html#OutText-String-Boolean-Integer-">OutText</a></td>
@@ -1720,7 +1720,7 @@
 <tr class="list">
 <td class="itemname"><a class="bold" href="MP.Parser.html#ProcessLinesAdd-String-">ProcessLinesAdd</a></td>
 <td class="itemunit"><a class="bold" href="MP.Parser.html">MP.Parser</a></td>
-<td class="itemdesc"><p><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong> </strong>* CRITICIAL SECTIONS <strong>* </strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> Adds a line to <a class="normal" href="MPForm.html#ProcessLines">ProcessLines</a> thread safe</p></td>
+<td class="itemdesc"><p><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong> </strong>* CRITICIAL SECTIONS <strong>* </strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong><strong></strong> Adds a line to <a class="normal" href="MPForm.html#ProcessedCommandLines">ProcessedCommandLines</a> thread safe</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="Noso.Network.html#ProcessPingCommand-String-Integer-Boolean-">ProcessPingCommand</a></td>
